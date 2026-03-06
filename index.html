@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advancement Tracker — Spectrum & Minecraft</title>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#0a0c0f; --bg2:#10141a; --bg3:#161c25; --bg4:#1a2130;
+  --border:#1e2d3d; --border2:#2a3f55;
+  --accent:#00c9a7; --accent2:#0090ff; --accent3:#ff6b35;
+  --text:#c8d8e8; --text2:#7a9ab5; --text3:#4a6a85;
+  --done:#00c9a7; --notdone:#ff4455;
+  --row1:#10141a; --row2:#131820;
+  --panel-w:230px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:'Rajdhani',sans-serif;font-size:16px;height:100vh;display:flex;flex-direction:column;overflow:hidden;}
+
+/* ── HEADER ── */
+header{height:54px;background:var(--bg2);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 18px;gap:12px;flex-shrink:0;}
+.logo{font-family:'Share Tech Mono',monospace;font-size:17px;color:var(--accent);letter-spacing:2px;white-space:nowrap;}
+.logo span{color:var(--text2);}
+.file-zone{display:flex;align-items:center;gap:8px;}
+.file-btn{padding:5px 13px;background:rgba(0,144,255,.12);border:1px solid var(--accent2);color:var(--accent2);font-family:'Rajdhani',sans-serif;font-weight:600;font-size:13px;cursor:pointer;border-radius:3px;transition:all .12s;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;}
+.file-btn:hover{background:rgba(0,144,255,.25);}
+#fileInput{display:none;}
+.file-name{font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text3);max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.stats-bar{display:flex;gap:18px;margin-left:auto;align-items:center;}
+.stat{display:flex;flex-direction:column;align-items:flex-end;}
+.stat-val{font-family:'Share Tech Mono',monospace;font-size:15px;color:var(--accent);}
+.stat-lab{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;}
+.hdr-btn{padding:5px 12px;font-family:'Rajdhani',sans-serif;font-weight:600;font-size:13px;cursor:pointer;border-radius:3px;transition:all .12s;text-transform:uppercase;letter-spacing:.4px;border:1px solid;}
+.hdr-btn-orange{background:rgba(255,107,53,.1);border-color:var(--accent3);color:var(--accent3);}
+.hdr-btn-orange:hover{background:rgba(255,107,53,.25);}
+.meta-status{font-family:'Share Tech Mono',monospace;font-size:10px;padding:3px 8px;border-radius:10px;}
+.meta-status.ok{background:rgba(0,201,167,.1);color:var(--accent);border:1px solid rgba(0,201,167,.3);}
+.meta-status.err{background:rgba(255,68,85,.1);color:var(--notdone);border:1px solid rgba(255,68,85,.3);}
+.meta-status.loading{background:rgba(0,144,255,.1);color:var(--accent2);border:1px solid rgba(0,144,255,.3);}
+
+.prog-bar-wrap{height:3px;background:var(--border);flex-shrink:0;}
+.prog-bar{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width .4s;}
+
+/* ── WORKSPACE ── */
+.workspace{display:flex;flex:1;overflow:hidden;}
+
+/* ── NAV PANELS ── */
+.nav-panels{width:var(--panel-w);border-right:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0;overflow:hidden;}
+.panel-sec{display:flex;flex-direction:column;border-bottom:1px solid var(--border);flex-shrink:0;}
+.panel-sec.grow{flex:1;overflow:hidden;}
+.panel-label{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:2px;padding:7px 12px 5px;background:var(--bg);border-bottom:1px solid var(--border);}
+.panel-list{overflow-y:auto;flex:1;}
+.panel-list::-webkit-scrollbar{width:4px;}
+.panel-list::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px;}
+.nav-item{padding:9px 12px;cursor:pointer;display:flex;align-items:center;gap:8px;border-left:2px solid transparent;transition:all .1s;font-weight:500;font-size:15px;}
+.nav-item:hover{background:var(--bg3);}
+.nav-item.active{border-left-color:var(--accent);background:rgba(0,201,167,.07);color:var(--accent);}
+.ns-icon{width:20px;height:20px;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;}
+.ns-mc{background:rgba(0,144,255,.2);color:var(--accent2);}
+.ns-sp{background:rgba(0,201,167,.2);color:var(--accent);}
+.ns-other{background:rgba(255,107,53,.2);color:var(--accent3);}
+.folder-item{padding:8px 12px 8px 14px;cursor:pointer;display:flex;align-items:center;gap:6px;font-size:14px;font-weight:500;color:var(--text2);border-left:2px solid transparent;transition:all .1s;}
+.folder-item:hover{background:var(--bg3);color:var(--text);}
+.folder-item.active{border-left-color:var(--accent2);background:rgba(0,144,255,.06);color:var(--accent2);}
+.f-count{margin-left:auto;font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text3);}
+
+/* ── MAIN ── */
+.main{flex:1;display:flex;flex-direction:column;overflow:hidden;}
+.toolbar{padding:9px 14px;background:var(--bg2);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;flex-shrink:0;flex-wrap:wrap;}
+.breadcrumb{font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text3);display:flex;align-items:center;gap:5px;flex:1;overflow:hidden;min-width:0;}
+.breadcrumb .bc-ns{color:var(--accent);}
+.breadcrumb .sep{color:var(--text3);}
+.filter-btns{display:flex;gap:4px;}
+.filter-btn{padding:4px 11px;background:transparent;border:1px solid var(--border2);color:var(--text2);font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:600;cursor:pointer;border-radius:3px;transition:all .1s;text-transform:uppercase;}
+.filter-btn:hover{border-color:var(--accent);color:var(--accent);}
+.filter-btn.fa{background:var(--accent);border-color:var(--accent);color:#000;}
+.filter-btn.fn{background:var(--notdone);border-color:var(--notdone);color:#fff;}
+.sort-sel,.search-box{padding:5px 9px;background:var(--bg3);border:1px solid var(--border);color:var(--text);font-family:'Rajdhani',sans-serif;font-size:14px;border-radius:3px;outline:none;}
+.sort-sel{cursor:pointer;}
+.sort-sel option{background:var(--bg2);}
+.search-box{width:160px;}
+.search-box::placeholder{color:var(--text3);}
+.search-box:focus,.sort-sel:focus{border-color:var(--accent2);}
+.list-header{display:grid;grid-template-columns:30px 1fr 90px 170px 30px;padding:6px 12px;background:var(--bg);border-bottom:1px solid var(--border);font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;flex-shrink:0;}
+.list-container{flex:1;overflow-y:auto;}
+.list-container::-webkit-scrollbar{width:6px;}
+.list-container::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px;}
+.adv-row{border-bottom:1px solid var(--border);}
+.adv-main{display:grid;grid-template-columns:30px 1fr 90px 170px 30px;padding:9px 12px;align-items:center;cursor:pointer;transition:background .08s;}
+.adv-row:nth-child(even) .adv-main{background:var(--row2);}
+.adv-row:nth-child(odd) .adv-main{background:var(--row1);}
+.adv-row:hover .adv-main{background:var(--bg3);}
+.status-dot{width:10px;height:10px;border-radius:50%;margin:auto;}
+.status-dot.done{background:var(--done);box-shadow:0 0 6px rgba(0,201,167,.5);}
+.status-dot.notdone{background:transparent;border:1.5px solid var(--notdone);}
+.adv-title{font-weight:600;font-size:15px;padding-right:10px;overflow:hidden;}
+.adv-title-name{color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;}
+.adv-id{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text3);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.crit-count{font-family:'Share Tech Mono',monospace;font-size:12px;}
+.cc-done{color:var(--done);}
+.cc-total{color:var(--text3);}
+.adv-ts{font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text3);}
+.adv-ts.done{color:var(--done);opacity:.75;}
+.expand-btn{width:22px;height:22px;display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:11px;transition:transform .15s,color .1s;}
+.expand-btn.open{transform:rotate(90deg);color:var(--accent);}
+.criteria-panel{display:none;background:rgba(0,0,0,.25);border-top:1px solid var(--border);padding:8px 12px 10px 42px;}
+.criteria-panel.open{display:block;}
+.crit-row{display:grid;grid-template-columns:14px 1fr 160px;padding:4px 0;gap:8px;align-items:center;border-bottom:1px solid rgba(255,255,255,.03);}
+.crit-row:last-child{border-bottom:none;}
+.crit-dot{width:6px;height:6px;border-radius:50%;}
+.crit-dot.done{background:var(--done);}
+.crit-dot.notdone{background:transparent;border:1px solid var(--notdone);}
+.crit-name{font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.crit-time{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text3);text-align:right;}
+.crit-time.done{color:var(--done);opacity:.65;}
+.meta-card{margin-top:10px;padding:10px 12px;background:rgba(255,107,53,.05);border:1px solid rgba(255,107,53,.15);border-radius:4px;display:flex;flex-direction:column;gap:6px;}
+.meta-desc{font-size:14px;color:var(--text2);line-height:1.5;}
+.meta-guide{font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text);white-space:pre-wrap;line-height:1.7;background:rgba(0,0,0,.2);padding:8px;border-radius:3px;}
+.meta-link{display:inline-flex;align-items:center;gap:5px;font-size:13px;color:var(--accent2);text-decoration:none;}
+.meta-link:hover{text-decoration:underline;}
+.edit-adv-btn{display:inline-flex;align-items:center;gap:4px;margin-top:8px;padding:4px 10px;background:rgba(255,107,53,.08);border:1px solid rgba(255,107,53,.25);color:var(--accent3);font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:600;cursor:pointer;border-radius:3px;text-transform:uppercase;transition:all .12s;}
+.edit-adv-btn:hover{background:rgba(255,107,53,.2);border-color:var(--accent3);}
+.empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:12px;color:var(--text3);}
+.em-icon{font-size:40px;opacity:.3;}
+.em-title{font-size:17px;font-weight:600;text-transform:uppercase;letter-spacing:1px;}
+.em-sub{font-size:13px;}
+
+/* ── MODALS ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:100;display:none;align-items:center;justify-content:center;}
+.modal-overlay.open{display:flex;}
+.modal{background:var(--bg2);border:1px solid var(--border2);border-radius:6px;width:680px;max-width:95vw;max-height:90vh;display:flex;flex-direction:column;overflow:hidden;}
+.modal-wide{width:960px;}
+.modal-header{padding:13px 18px;background:var(--bg);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.modal-title{font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--accent3);}
+.modal-subtitle{font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text3);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.modal-close{margin-left:auto;width:28px;height:28px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text2);font-size:18px;border-radius:3px;transition:all .1s;flex-shrink:0;}
+.modal-close:hover{background:var(--bg3);color:var(--text);}
+.modal-body{padding:16px 18px;overflow-y:auto;display:flex;flex-direction:column;gap:14px;}
+.modal-body::-webkit-scrollbar{width:5px;}
+.modal-body::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px;}
+.field-group{display:flex;flex-direction:column;gap:5px;}
+.field-label{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;}
+.field-note{font-size:12px;color:var(--text3);margin-top:1px;}
+.field-input,.field-textarea{padding:8px 10px;background:var(--bg3);border:1px solid var(--border);color:var(--text);font-family:'Rajdhani',sans-serif;font-size:14px;border-radius:3px;outline:none;width:100%;transition:border-color .1s;}
+.field-input:focus,.field-textarea:focus{border-color:var(--accent2);}
+.field-textarea{resize:vertical;min-height:80px;line-height:1.5;}
+.modal-footer{padding:11px 18px;background:var(--bg);border-top:1px solid var(--border);display:flex;gap:10px;justify-content:flex-end;align-items:center;flex-shrink:0;}
+.btn-primary{padding:7px 20px;background:var(--accent);border:none;color:#000;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:14px;cursor:pointer;border-radius:3px;text-transform:uppercase;letter-spacing:.4px;transition:opacity .1s;}
+.btn-primary:hover{opacity:.85;}
+.btn-secondary{padding:7px 16px;background:transparent;border:1px solid var(--border2);color:var(--text2);font-family:'Rajdhani',sans-serif;font-weight:600;font-size:14px;cursor:pointer;border-radius:3px;text-transform:uppercase;transition:all .1s;}
+.btn-secondary:hover{border-color:var(--text);color:var(--text);}
+.btn-green{padding:6px 13px;background:rgba(0,201,167,.1);border:1px solid var(--accent);color:var(--accent);font-family:'Rajdhani',sans-serif;font-weight:600;font-size:13px;cursor:pointer;border-radius:3px;transition:all .12s;text-transform:uppercase;}
+.btn-green:hover{background:rgba(0,201,167,.25);}
+.btn-blue{padding:6px 13px;background:rgba(0,144,255,.1);border:1px solid var(--accent2);color:var(--accent2);font-family:'Rajdhani',sans-serif;font-weight:600;font-size:13px;cursor:pointer;border-radius:3px;transition:all .12s;text-transform:uppercase;}
+.btn-blue:hover{background:rgba(0,144,255,.25);}
+
+/* bulk table */
+.bulk-toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;flex-shrink:0;}
+.bulk-input-sm{padding:5px 9px;background:var(--bg3);border:1px solid var(--border);color:var(--text);font-family:'Rajdhani',sans-serif;font-size:14px;border-radius:3px;outline:none;}
+.bulk-input-sm:focus{border-color:var(--accent2);}
+.bulk-input-sm::placeholder{color:var(--text3);}
+.bulk-table-wrap{overflow:auto;flex:1;border:1px solid var(--border);border-radius:4px;}
+table{width:100%;border-collapse:collapse;font-size:13px;}
+thead th{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;padding:7px 8px;border-bottom:1px solid var(--border);text-align:left;background:var(--bg);position:sticky;top:0;z-index:2;}
+tbody td{padding:5px 8px;border-bottom:1px solid rgba(255,255,255,.04);}
+tbody tr:nth-child(even) td{background:rgba(255,255,255,.02);}
+.td-id{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text3);}
+.td-input{padding:4px 7px;background:var(--bg3);border:1px solid var(--border);color:var(--text);font-family:'Rajdhani',sans-serif;font-size:13px;border-radius:2px;outline:none;width:100%;}
+.td-input:focus{border-color:var(--accent2);}
+.status-pill{display:inline-flex;align-items:center;gap:4px;font-family:'Share Tech Mono',monospace;font-size:9px;padding:2px 6px;border-radius:8px;}
+.sp-done{background:rgba(0,201,167,.12);color:var(--done);border:1px solid rgba(0,201,167,.25);}
+.sp-todo{background:rgba(255,68,85,.08);color:var(--notdone);border:1px solid rgba(255,68,85,.2);}
+
+/* notice banner */
+.notice{padding:9px 16px;background:rgba(0,144,255,.08);border-bottom:1px solid rgba(0,144,255,.2);font-size:13px;color:var(--accent2);display:flex;align-items:center;gap:8px;flex-shrink:0;}
+.notice a{color:var(--accent2);}
+.notice-close{margin-left:auto;cursor:pointer;color:var(--text3);font-size:16px;}
+
+/* toast */
+.toast{position:fixed;bottom:20px;right:20px;padding:9px 16px;background:var(--done);color:#000;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:14px;border-radius:4px;z-index:300;opacity:0;transition:opacity .2s;pointer-events:none;}
+.toast.show{opacity:1;}
+</style>
+</head>
+<body>
+
+<!-- Notice banner — hidden once dismissed -->
+<div class="notice" id="noticeBanner">
+  ℹ️ Load your own save file using the button in the header. No save data is uploaded anywhere — everything runs in your browser.
+  <span class="notice-close" onclick="document.getElementById('noticeBanner').style.display='none'">✕</span>
+</div>
+
+<header>
+  <div class="logo">ADVANC<span>EMENT</span>TRACKER</div>
+  <div class="file-zone">
+    <label class="file-btn" for="fileInput">📂 Load Save</label>
+    <input type="file" id="fileInput" accept=".json">
+    <span class="file-name" id="fileName">no save loaded</span>
+  </div>
+  <span class="meta-status loading" id="metaStatus">loading meta…</span>
+  <button class="hdr-btn hdr-btn-orange" onclick="openBulkEditor()">✏️ Edit Names &amp; Guides</button>
+  <div class="stats-bar" id="statsBar">
+    <div class="stat"><span class="stat-val">—</span><span class="stat-lab">Done</span></div>
+    <div class="stat"><span class="stat-val">—</span><span class="stat-lab">Remaining</span></div>
+    <div class="stat"><span class="stat-val">—%</span><span class="stat-lab">Progress</span></div>
+  </div>
+</header>
+
+<div class="prog-bar-wrap"><div class="prog-bar" id="progBar" style="width:0%"></div></div>
+
+<div class="workspace">
+  <div class="nav-panels">
+    <div class="panel-sec" style="max-height:130px;">
+      <div class="panel-label">⬡ Namespace</div>
+      <div class="panel-list" id="nsList"></div>
+    </div>
+    <div class="panel-sec grow">
+      <div class="panel-label">📁 Category</div>
+      <div class="panel-list" id="folderList"></div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="toolbar">
+      <div class="breadcrumb" id="breadcrumb"><span class="bc-ns">Select a namespace</span></div>
+      <div class="filter-btns">
+        <button class="filter-btn fa" onclick="setFilter('all',this)">All</button>
+        <button class="filter-btn" onclick="setFilter('done',this)">✓ Done</button>
+        <button class="filter-btn" onclick="setFilter('todo',this)">✗ Todo</button>
+      </div>
+      <select class="sort-sel" id="sortSel" onchange="renderList()">
+        <option value="path">Path Order</option>
+        <option value="title">Title A→Z</option>
+        <option value="recent">Most Recent</option>
+        <option value="oldest">Oldest First</option>
+      </select>
+      <input class="search-box" id="searchBox" type="text" placeholder="Search…" oninput="renderList()">
+    </div>
+    <div class="list-header">
+      <div></div><div>Advancement</div><div>Criteria</div><div>Completed</div><div></div>
+    </div>
+    <div class="list-container" id="listContainer">
+      <div class="empty-state">
+        <div class="em-icon">◈</div>
+        <div class="em-title">No save loaded</div>
+        <div class="em-sub">Click "Load Save" to open your advancement progress JSON</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SINGLE EDIT MODAL -->
+<div class="modal-overlay" id="editModal">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title">Edit Advancement</div>
+      <div class="modal-subtitle" id="editModalId"></div>
+      <div class="modal-close" onclick="closeEditModal()">✕</div>
+    </div>
+    <div class="modal-body">
+      <div class="field-group">
+        <div class="field-label">Display Name</div>
+        <div class="field-note">Shown in the tracker. Leave blank to use the built-in name or auto-generate from the ID.</div>
+        <input class="field-input" id="editName" type="text" placeholder="e.g. Getting an Upgrade">
+      </div>
+      <div class="field-group">
+        <div class="field-label">Description</div>
+        <div class="field-note">Short in-game description or summary of what this advancement is about.</div>
+        <textarea class="field-textarea" id="editDesc" placeholder="e.g. Upgrade your pickaxe to iron or better"></textarea>
+      </div>
+      <div class="field-group">
+        <div class="field-label">Guide / Instructions</div>
+        <div class="field-note">Step-by-step how-to, required items, tips, progression notes. Shown expanded in the tracker.</div>
+        <textarea class="field-textarea" style="min-height:120px;" id="editGuide" placeholder="1. Gather 3 iron ingots&#10;2. Open a crafting table&#10;3. Place ingots in a pickaxe pattern"></textarea>
+      </div>
+      <div class="field-group">
+        <div class="field-label">Video / Resource Link</div>
+        <div class="field-note">Optional YouTube URL, wiki page, or other guide link.</div>
+        <input class="field-input" id="editLink" type="text" placeholder="https://youtube.com/watch?v=...">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-secondary" onclick="closeEditModal()">Cancel</button>
+      <button class="btn-primary" onclick="saveEditModal()">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- BULK EDITOR MODAL -->
+<div class="modal-overlay" id="bulkModal">
+  <div class="modal modal-wide">
+    <div class="modal-header">
+      <div class="modal-title">✏️ Name &amp; Guide Editor</div>
+      <div class="modal-subtitle">All changes save to your browser — export JSON to share with everyone</div>
+      <div class="modal-close" onclick="closeBulkModal()">✕</div>
+    </div>
+    <div class="modal-body" style="gap:10px;">
+
+      <!-- Toolbar -->
+      <div class="bulk-toolbar">
+        <input class="bulk-input-sm" id="bulkSearch" style="width:200px;" type="text" placeholder="Filter by ID or name…" oninput="renderBulkTable()">
+        <select class="bulk-input-sm" id="bulkNsFilter" onchange="renderBulkTable()">
+          <option value="">All namespaces</option>
+        </select>
+        <select class="bulk-input-sm" id="bulkStatusFilter" onchange="renderBulkTable()">
+          <option value="">Any status</option>
+          <option value="done">Done only</option>
+          <option value="todo">Todo only</option>
+          <option value="named">Has custom name</option>
+          <option value="unnamed">Needs name</option>
+        </select>
+        <span id="bulkCount" style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text3);"></span>
+      </div>
+
+      <!-- Export / Import -->
+      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:10px 12px;background:var(--bg3);border:1px solid var(--border);border-radius:4px;">
+        <span style="font-size:13px;color:var(--text2);flex:1;">
+          <strong style="color:var(--text);">To share your edits publicly:</strong>
+          Export the JSON below, commit it to your GitHub repo as <code style="font-family:'Share Tech Mono',monospace;color:var(--accent);font-size:12px;">meta.json</code>, and everyone will see your changes on next load.
+        </span>
+        <button class="btn-green" onclick="exportMeta()">⬇ Export meta.json</button>
+        <button class="btn-blue" onclick="toggleImport()">⬆ Import meta.json</button>
+      </div>
+      <div id="importBox" style="display:none;flex-direction:column;gap:8px;">
+        <textarea class="field-textarea" id="importArea" style="min-height:80px;font-family:'Share Tech Mono',monospace;font-size:11px;" placeholder='Paste meta.json content here and click Import…'></textarea>
+        <div style="display:flex;gap:8px;">
+          <button class="btn-green" onclick="importMeta()">Apply Import</button>
+          <button class="btn-secondary" onclick="toggleImport()">Cancel</button>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="bulk-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:32%">Advancement ID</th>
+              <th style="width:8%">Status</th>
+              <th style="width:26%">Display Name</th>
+              <th style="width:34%">Description</th>
+            </tr>
+          </thead>
+          <tbody id="bulkTbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <span style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text3);" id="bulkCountFooter"></span>
+      <button class="btn-secondary" onclick="closeBulkModal()">Close</button>
+      <button class="btn-primary" onclick="saveBulkEditor()">Save All Changes</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">✓ Saved</div>
+
+<script>
+// ══════════════════════════════════════════════════════════════════
+//  META — loaded from meta.json, then merged with localStorage overrides
+//  Structure of each entry: { name, desc, guide, link }
+// ══════════════════════════════════════════════════════════════════
+let REMOTE_META = {};   // loaded from meta.json on the server
+let LOCAL_META  = {};   // user's local overrides (localStorage)
+
+// Load local overrides
+try { LOCAL_META = JSON.parse(localStorage.getItem('adv_meta') || '{}'); } catch(e) {}
+
+// Effective metadata = remote base + local overrides on top
+function getMeta(id) {
+  return Object.assign({}, REMOTE_META[id] || {}, LOCAL_META[id] || {});
+}
+function getTitle(id) {
+  const m = getMeta(id);
+  if (m.name) return m.name;
+  // fallback: prettify the last path segment
+  const path = id.split(':')[1] || id;
+  const last = path.split('/').pop();
+  return last.replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+function saveLocal() {
+  try { localStorage.setItem('adv_meta', JSON.stringify(LOCAL_META)); } catch(e) {}
+  showToast('✓ Saved');
+}
+function showToast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(el._t);
+  el._t = setTimeout(() => el.classList.remove('show'), 1800);
+}
+
+// ── LOAD meta.json ────────────────────────────────────────────────
+async function loadRemoteMeta() {
+  const statusEl = document.getElementById('metaStatus');
+  try {
+    // In development (file://) this will fail due to CORS — that's fine, fall through to local
+    const res = await fetch('meta.json');
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    REMOTE_META = await res.json();
+    const count = Object.keys(REMOTE_META).length;
+    statusEl.textContent = `meta: ${count} entries`;
+    statusEl.className = 'meta-status ok';
+  } catch(e) {
+    // Running locally without a server, or meta.json not found yet
+    statusEl.textContent = 'meta: local only';
+    statusEl.className = 'meta-status err';
+  }
+  // Re-render if data already loaded
+  if (Object.keys(DATA).length) renderList();
+}
+
+// ── FORMATTING ────────────────────────────────────────────────────
+function fmtTs(ts) {
+  if (!ts) return '';
+  const d = new Date(ts.replace(' ','T').replace(/ ([+-]\d{4})$/,'$1'));
+  if (isNaN(d)) return ts.split(' ')[0];
+  return d.toLocaleDateString('en-US',{year:'2-digit',month:'2-digit',day:'2-digit'})
+       + ' ' + d.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',hour12:false});
+}
+function latestTs(criteria) {
+  const t = Object.values(criteria||{}).filter(Boolean);
+  return t.length ? t.reduce((a,b) => a>b?a:b) : null;
+}
+function doneCrit(criteria) {
+  return Object.values(criteria||{}).filter(Boolean).length;
+}
+
+// ── STATE ─────────────────────────────────────────────────────────
+let DATA = {};
+let selNs = null, selFolder = null, filterMode = 'all';
+let expanded = new Set();
+
+function loadData(json) {
+  try {
+    DATA = typeof json === 'string' ? JSON.parse(json) : json;
+    delete DATA['DataVersion'];
+    selNs = null; selFolder = null; expanded.clear();
+    renderAll();
+  } catch(e) { alert('Invalid JSON: ' + e.message); }
+}
+
+// ── RENDER ────────────────────────────────────────────────────────
+function renderAll() {
+  renderStats();
+  renderNsList();
+  document.getElementById('folderList').innerHTML = '';
+  document.getElementById('breadcrumb').innerHTML = '<span class="bc-ns">Select a namespace</span>';
+  document.getElementById('listContainer').innerHTML = `
+    <div class="empty-state">
+      <div class="em-icon">◈</div>
+      <div class="em-title">Select a namespace</div>
+      <div class="em-sub">Choose a namespace from the left panel to begin browsing</div>
+    </div>`;
+}
+
+function renderStats() {
+  const all = Object.entries(DATA);
+  const done = all.filter(([,v]) => v.done).length;
+  const pct = all.length ? Math.round(done/all.length*100) : 0;
+  document.getElementById('progBar').style.width = pct + '%';
+  document.getElementById('statsBar').innerHTML = `
+    <div class="stat"><span class="stat-val">${done.toLocaleString()}</span><span class="stat-lab">Done</span></div>
+    <div class="stat"><span class="stat-val">${(all.length-done).toLocaleString()}</span><span class="stat-lab">Remaining</span></div>
+    <div class="stat"><span class="stat-val">${pct}%</span><span class="stat-lab">Progress</span></div>`;
+}
+
+function renderNsList() {
+  const cnt={}, dn={};
+  for (const [k,v] of Object.entries(DATA)) {
+    const ns = k.split(':')[0];
+    cnt[ns] = (cnt[ns]||0)+1;
+    if (v.done) dn[ns] = (dn[ns]||0)+1;
+  }
+  const el = document.getElementById('nsList');
+  el.innerHTML = '';
+  for (const ns of Object.keys(cnt).sort()) {
+    const pct = Math.round((dn[ns]||0)/cnt[ns]*100);
+    const cls = ns==='minecraft'?'ns-mc':ns==='spectrum'?'ns-sp':'ns-other';
+    const abbr = ns==='minecraft'?'MC':ns==='spectrum'?'SP':ns.slice(0,2).toUpperCase();
+    const d = document.createElement('div');
+    d.className='nav-item'; d.dataset.ns=ns;
+    d.innerHTML=`<span class="ns-icon ${cls}">${abbr}</span><span>${ns}</span>
+      <span style="margin-left:auto;font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text3)">${pct}%</span>`;
+    d.onclick = () => selectNs(ns);
+    el.appendChild(d);
+  }
+}
+
+function selectNs(ns) {
+  selNs=ns; selFolder=null; expanded.clear();
+  document.querySelectorAll('#nsList .nav-item').forEach(e => e.classList.toggle('active', e.dataset.ns===ns));
+  renderFolderList(); renderList();
+}
+
+function renderFolderList() {
+  const el = document.getElementById('folderList');
+  el.innerHTML = '';
+  if (!selNs) return;
+  const fc={}, fd={};
+  for (const [k,v] of Object.entries(DATA)) {
+    if (!k.startsWith(selNs+':')) continue;
+    const path = k.split(':')[1]||'';
+    const parts = path.split('/');
+    const folder = parts.length>1 ? parts[0] : '__root__';
+    fc[folder] = (fc[folder]||0)+1;
+    if (v.done) fd[folder] = (fd[folder]||0)+1;
+  }
+  const tot = Object.values(fc).reduce((a,b)=>a+b,0);
+  const totDn = Object.values(fd).reduce((a,b)=>a+b,0);
+  const allD = document.createElement('div');
+  allD.className = 'folder-item'+(selFolder===null?' active':'');
+  allD.innerHTML = `<span style="font-size:10px;color:var(--text3)">▸</span><span>All</span><span class="f-count">${totDn}/${tot}</span>`;
+  allD.onclick = () => selectFolder(null);
+  el.appendChild(allD);
+  for (const folder of Object.keys(fc).sort()) {
+    if (folder==='__root__') continue;
+    const d = document.createElement('div');
+    d.className = 'folder-item'+(selFolder===folder?' active':'');
+    d.dataset.folder = folder;
+    const label = folder.replace(/_/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
+    d.innerHTML = `<span style="font-size:10px;color:var(--text3)">▸</span><span>${label}</span><span class="f-count">${fd[folder]||0}/${fc[folder]}</span>`;
+    d.onclick = () => selectFolder(folder);
+    el.appendChild(d);
+  }
+}
+
+function selectFolder(folder) {
+  selFolder=folder; expanded.clear();
+  document.querySelectorAll('#folderList .folder-item').forEach(e => {
+    e.classList.toggle('active', (e.dataset.folder||null)===folder);
+  });
+  renderList();
+}
+
+function getFiltered() {
+  if (!selNs) return [];
+  const q = document.getElementById('searchBox').value.toLowerCase();
+  let entries = Object.entries(DATA).filter(([k]) => k.startsWith(selNs+':'));
+  if (selFolder!==null) {
+    entries = entries.filter(([k]) => {
+      const path=k.split(':')[1]||'';
+      const parts=path.split('/');
+      return parts.length>1 ? parts[0]===selFolder : selFolder==='__root__';
+    });
+  }
+  if (filterMode==='done') entries=entries.filter(([,v])=>v.done);
+  if (filterMode==='todo') entries=entries.filter(([,v])=>!v.done);
+  if (q) entries=entries.filter(([k])=>getTitle(k).toLowerCase().includes(q)||k.toLowerCase().includes(q));
+  const sort = document.getElementById('sortSel').value;
+  if (sort==='title') entries.sort((a,b)=>getTitle(a[0]).localeCompare(getTitle(b[0])));
+  else if (sort==='recent') entries.sort((a,b)=>(latestTs(b[1].criteria)||'').localeCompare(latestTs(a[1].criteria)||''));
+  else if (sort==='oldest') entries.sort((a,b)=>(latestTs(a[1].criteria)||'').localeCompare(latestTs(b[1].criteria)||''));
+  else entries.sort((a,b)=>a[0].localeCompare(b[0]));
+  return entries;
+}
+
+function renderList() {
+  const container = document.getElementById('listContainer');
+  const entries = getFiltered();
+  const bc = document.getElementById('breadcrumb');
+  if (!selNs) { bc.innerHTML='<span class="bc-ns">Select a namespace</span>'; return; }
+  let bcHtml = `<span class="bc-ns">${selNs}</span>`;
+  if (selFolder) bcHtml += `<span class="sep"> › </span><span>${selFolder}</span>`;
+  bcHtml += `<span class="sep"> — </span><span style="color:var(--text3)">${entries.length} advancements</span>`;
+  bc.innerHTML = bcHtml;
+  if (!entries.length) {
+    container.innerHTML=`<div class="empty-state"><div class="em-icon">⊘</div><div class="em-title">No results</div><div class="em-sub">Try adjusting filters or search</div></div>`;
+    return;
+  }
+  container.innerHTML = entries.map(([id,v]) => {
+    const title = getTitle(id);
+    const done = v.done;
+    const lts = latestTs(v.criteria);
+    const total = Object.keys(v.criteria||{}).length;
+    const doneC = doneCrit(v.criteria);
+    const isOpen = expanded.has(id);
+    const meta = getMeta(id);
+
+    const critHtml = Object.entries(v.criteria||{}).map(([name,ts]) => {
+      const cd = !!ts;
+      return `<div class="crit-row">
+        <div class="crit-dot ${cd?'done':'notdone'}"></div>
+        <div class="crit-name">${name.replace(/_/g,' ').replace(/\.json$/,'')}</div>
+        <div class="crit-time ${cd?'done':''}">${ts?fmtTs(ts):'—'}</div>
+      </div>`;
+    }).join('');
+
+    const metaCard = (meta.desc||meta.guide||meta.link) ? `
+      <div class="meta-card">
+        ${meta.desc ? `<div class="meta-desc">${esc(meta.desc)}</div>` : ''}
+        ${meta.guide ? `<div class="meta-guide">${esc(meta.guide)}</div>` : ''}
+        ${meta.link ? `<a class="meta-link" href="${esc(meta.link)}" target="_blank" rel="noopener">▶ Open Guide</a>` : ''}
+      </div>` : '';
+
+    return `<div class="adv-row" data-id="${CSS.escape(id)}">
+      <div class="adv-main" onclick="toggleExpand(${JSON.stringify(id)})">
+        <div><div class="status-dot ${done?'done':'notdone'}"></div></div>
+        <div class="adv-title">
+          <span class="adv-title-name">${esc(title)}</span>
+          <span class="adv-id">${id}</span>
+        </div>
+        <div class="crit-count"><span class="cc-done">${doneC}</span><span class="cc-total">/${total}</span></div>
+        <div class="adv-ts ${done?'done':''}">${lts?fmtTs(lts):'—'}</div>
+        <div class="expand-btn ${isOpen?'open':''}">▶</div>
+      </div>
+      <div class="criteria-panel ${isOpen?'open':''}">
+        ${critHtml}
+        ${metaCard}
+        <button class="edit-adv-btn" onclick="openEditModal(${JSON.stringify(id)},event)">✏️ Edit Name &amp; Guide</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function toggleExpand(id) {
+  if (expanded.has(id)) expanded.delete(id); else expanded.add(id);
+  const row = document.querySelector(`[data-id="${CSS.escape(id)}"]`);
+  if (!row) return;
+  row.querySelector('.expand-btn').classList.toggle('open', expanded.has(id));
+  row.querySelector('.criteria-panel').classList.toggle('open', expanded.has(id));
+}
+
+function setFilter(mode, btn) {
+  filterMode = mode;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('fa','fn'));
+  btn.classList.add(mode==='todo'?'fn':'fa');
+  renderList();
+}
+
+// ── SINGLE EDIT MODAL ─────────────────────────────────────────────
+let _editId = null;
+function openEditModal(id, e) {
+  if (e) e.stopPropagation();
+  _editId = id;
+  const m = getMeta(id);
+  document.getElementById('editModalId').textContent = id;
+  document.getElementById('editName').value = m.name || '';
+  document.getElementById('editDesc').value = m.desc || '';
+  document.getElementById('editGuide').value = m.guide || '';
+  document.getElementById('editLink').value = m.link || '';
+  document.getElementById('editModal').classList.add('open');
+}
+function closeEditModal() {
+  document.getElementById('editModal').classList.remove('open');
+  _editId = null;
+}
+function saveEditModal() {
+  if (!_editId) return;
+  if (!LOCAL_META[_editId]) LOCAL_META[_editId] = {};
+  LOCAL_META[_editId].name  = document.getElementById('editName').value.trim();
+  LOCAL_META[_editId].desc  = document.getElementById('editDesc').value.trim();
+  LOCAL_META[_editId].guide = document.getElementById('editGuide').value.trim();
+  LOCAL_META[_editId].link  = document.getElementById('editLink').value.trim();
+  saveLocal();
+  closeEditModal();
+  renderList();
+}
+
+// ── BULK EDITOR ───────────────────────────────────────────────────
+function openBulkEditor() {
+  // Populate namespace filter
+  const nsf = document.getElementById('bulkNsFilter');
+  const prev = nsf.value;
+  nsf.innerHTML = '<option value="">All namespaces</option>';
+  const nss = new Set(Object.keys(DATA).map(k=>k.split(':')[0]));
+  for (const ns of [...nss].sort()) {
+    const o=document.createElement('option'); o.value=ns; o.textContent=ns;
+    if (ns===prev) o.selected=true;
+    nsf.appendChild(o);
+  }
+  document.getElementById('importBox').style.display='none';
+  document.getElementById('importArea').value='';
+  document.getElementById('bulkModal').classList.add('open');
+  renderBulkTable();
+}
+function closeBulkModal() {
+  document.getElementById('bulkModal').classList.remove('open');
+}
+function toggleImport() {
+  const box = document.getElementById('importBox');
+  box.style.display = box.style.display==='none' ? 'flex' : 'none';
+}
+
+function renderBulkTable() {
+  const q = document.getElementById('bulkSearch').value.toLowerCase();
+  const nsf = document.getElementById('bulkNsFilter').value;
+  const sf = document.getElementById('bulkStatusFilter').value;
+
+  // Build list from ALL known IDs: those in DATA + those in remote meta
+  let ids = Array.from(new Set([
+    ...Object.keys(DATA).filter(k=>k!=='DataVersion'),
+    ...Object.keys(REMOTE_META),
+    ...Object.keys(LOCAL_META),
+  ]));
+
+  if (nsf) ids = ids.filter(k => k.startsWith(nsf+':'));
+  if (sf==='done') ids = ids.filter(k => DATA[k]?.done);
+  if (sf==='todo') ids = ids.filter(k => DATA[k] && !DATA[k].done);
+  if (sf==='named') ids = ids.filter(k => {
+    const m = getMeta(k); return m.name;
+  });
+  if (sf==='unnamed') ids = ids.filter(k => {
+    const m = getMeta(k); return !m.name;
+  });
+  if (q) ids = ids.filter(k => {
+    const t = getTitle(k).toLowerCase();
+    return k.toLowerCase().includes(q) || t.includes(q);
+  });
+  ids.sort();
+
+  const count = `${ids.length} advancements`;
+  document.getElementById('bulkCount').textContent = count;
+  document.getElementById('bulkCountFooter').textContent = count;
+
+  const tbody = document.getElementById('bulkTbody');
+  tbody.innerHTML = ids.map(id => {
+    const m = getMeta(id);
+    const v = DATA[id];
+    const isDone = v?.done;
+    const hasData = !!v;
+    const pillHtml = hasData
+      ? `<span class="status-pill ${isDone?'sp-done':'sp-todo'}">${isDone?'✓ done':'✗ todo'}</span>`
+      : `<span class="status-pill" style="background:rgba(255,255,255,.05);color:var(--text3);border:1px solid var(--border)">no save</span>`;
+
+    // Name placeholder: show built-in from REMOTE_META if available
+    const remoteName = REMOTE_META[id]?.name || '';
+    const autoFallback = (() => {
+      const path=id.split(':')[1]||id;
+      const last=path.split('/').pop();
+      return last.replace(/_/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
+    })();
+
+    return `<tr>
+      <td class="td-id">${id}</td>
+      <td>${pillHtml}</td>
+      <td><input class="td-input" data-id="${esc(id)}" data-field="name" value="${esc(m.name||'')}" placeholder="${esc(remoteName||autoFallback)}"></td>
+      <td><input class="td-input" data-id="${esc(id)}" data-field="desc" value="${esc(m.desc||'')}" placeholder="Description…"></td>
+    </tr>`;
+  }).join('');
+}
+
+function saveBulkEditor() {
+  document.querySelectorAll('#bulkTbody .td-input').forEach(inp => {
+    const id = inp.dataset.id, field = inp.dataset.field, val = inp.value.trim();
+    if (!LOCAL_META[id]) LOCAL_META[id] = {};
+    LOCAL_META[id][field] = val;
+  });
+  saveLocal();
+  closeBulkModal();
+  renderList();
+}
+
+function exportMeta() {
+  // Merge remote base + local overrides into one clean export
+  const allIds = Array.from(new Set([
+    ...Object.keys(REMOTE_META),
+    ...Object.keys(LOCAL_META),
+    ...Object.keys(DATA).filter(k=>k!=='DataVersion'),
+  ]));
+  const out = {};
+  for (const id of allIds.sort()) {
+    const m = getMeta(id);
+    out[id] = { name: m.name||'', desc: m.desc||'', guide: m.guide||'', link: m.link||'' };
+  }
+  const blob = new Blob([JSON.stringify(out,null,2)],{type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'meta.json';
+  a.click();
+  showToast('✓ Exported meta.json');
+}
+
+function importMeta() {
+  const raw = document.getElementById('importArea').value.trim();
+  try {
+    const data = JSON.parse(raw);
+    let count = 0;
+    for (const [id,val] of Object.entries(data)) {
+      if (!LOCAL_META[id]) LOCAL_META[id] = {};
+      if (val.name  !== undefined) LOCAL_META[id].name  = val.name;
+      if (val.desc  !== undefined) LOCAL_META[id].desc  = val.desc;
+      if (val.guide !== undefined) LOCAL_META[id].guide = val.guide;
+      if (val.link  !== undefined) LOCAL_META[id].link  = val.link;
+      count++;
+    }
+    saveLocal();
+    document.getElementById('importBox').style.display = 'none';
+    renderBulkTable();
+    showToast(`✓ Imported ${count} entries`);
+  } catch(e) { alert('Invalid JSON: ' + e.message); }
+}
+
+// Close modals on overlay click
+document.getElementById('editModal').addEventListener('click', e => { if(e.target===document.getElementById('editModal')) closeEditModal(); });
+document.getElementById('bulkModal').addEventListener('click', e => { if(e.target===document.getElementById('bulkModal')) closeBulkModal(); });
+
+// File upload
+document.getElementById('fileInput').addEventListener('change', e => {
+  const f = e.target.files[0]; if(!f) return;
+  document.getElementById('fileName').textContent = f.name;
+  const r = new FileReader();
+  r.onload = ev => loadData(ev.target.result);
+  r.readAsText(f);
+});
+
+// ── BOOT ──────────────────────────────────────────────────────────
+loadRemoteMeta();
+</script>
+</body>
+</html>
