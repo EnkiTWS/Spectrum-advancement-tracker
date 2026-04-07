@@ -2,1128 +2,1330 @@
   "spectrum:milestones/reveal_amaranth": {
     "name": "Reveal: Amaranth",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/reveal_azurite": {
     "name": "Reveal: Azurite",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/reveal_blood_orchid_petals": {
     "name": "Reveal: Blood Orchid Petals",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/reveal_colored_saplings_cmy": {
     "name": "Reveal: Colored Saplings (CMY)",
     "desc": "",
+    "req": "Creating Fading on the CMY Pedestal",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/reveal_colored_trees_k": {
     "name": "Reveal: Colored Trees (Black)",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/reveal_colored_trees_cmy": {
     "name": "Reveal: Colored Trees (CMY)",
     "desc": "",
+    "req": "Creating Fading on the CMY Pedestal",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/reveal_colored_trees_w": {
     "name": "Reveal: Colored Trees (White)",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/reveal_dragonbone": {
     "name": "Reveal: Dragonbone",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/reveal_four_leaf_clover": {
     "name": "Reveal: Four Leaf Clover",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/reveal_malachite": {
     "name": "Reveal: Malachite",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/reveal_mermaids_brush": {
     "name": "Reveal: Mermaid's Brush",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/reveal_paltaeria": {
     "name": "Reveal: Paltaeria",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/reveal_quitoxic_reeds": {
     "name": "Reveal: Quitoxic Reeds",
     "desc": "",
+    "req": "Build and interact with the Basic Pedestal Structure",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/reveal_radiating_ender": {
     "name": "Reveal: Radiating Ender",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/reveal_shimmerstone": {
     "name": "Reveal: Shimmerstone",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/reveal_storm_stones": {
     "name": "Reveal: Storm Stones",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/reveal_stratine": {
     "name": "Reveal: Stratine",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/unlock_conflicted_enchanting_with_enchanter": {
     "name": "Unlock: Conflicting Enchantments",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/unlock_complex_reagents": {
     "name": "Unlock: Complex Reagents",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/unlock_fourth_potion_workshop_reagent_slot": {
     "name": "Unlock: Fourth Brewing Slot",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/unlock_hostile_memorizing": {
     "name": "Unlock: Hostile Memorizing",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/unlock_overenchanting_with_enchanter": {
     "name": "Unlock: Overenchanting",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/unlock_spawner_creature_change": {
     "name": "Unlock: Spawner Creature Change",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/unlock_spawner_manipulation": {
     "name": "Unlock: Spawner Manipulation",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/unlock_shooting_stars": {
     "name": "Unlock: Shooting Stars",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/unlock_pastel_node_upgrading": {
     "name": "Unlock: Pastel Node Upgrading",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:milestones/unlock_pastel_node_coloring": {
     "name": "Unlock: Pastel Node Coloring",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:collect_pigment": {
     "name": "Paintbrush: Coloring",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:midgame/fill_ink_container": {
     "name": "Paintbrush: Ink Slinging",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/big_catch": {
     "name": "Enchantment: Big Catch",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/clovers_favor": {
     "name": "Enchantment: Clover's Favor",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/disarming": {
     "name": "Enchantment: Disarming",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/exuberance": {
     "name": "Enchantment: Exuberance",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/first_strike": {
     "name": "Enchantment: First Strike",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/foundry": {
     "name": "Enchantment: Foundry",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/improved_critical": {
     "name": "Enchantment: Improved Critical",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/indestructible": {
     "name": "Enchantment: Indestructible",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/inertia": {
     "name": "Enchantment: Inertia",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/inexorable": {
     "name": "Enchantment: Inexorable",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/inventory_insertion": {
     "name": "Enchantment: Inventory Insertion",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/pest_control": {
     "name": "Enchantment: Pest Control",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/razing_usage": {
     "name": "Enchantment: Razing",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/resonance_usage": {
     "name": "Enchantment: Resonance",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/serendipity_reel": {
     "name": "Enchantment: Serendipity Reel",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/sniping": {
     "name": "Enchantment: Sniping",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/steadfast": {
     "name": "Enchantment: Steadfast",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/tight_grip": {
     "name": "Enchantment: Tight Grip",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/treasure_hunter": {
     "name": "Enchantment: Treasure Hunter",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/voiding_usage": {
     "name": "Enchantment: Voiding",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/vanilla_damage": {
     "name": "Vanilla Enchantment: Damage",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/vanilla_luck": {
     "name": "Vanilla Enchantment: Luck",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/vanilla_projectile": {
     "name": "Vanilla Enchantment: Projectile",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/vanilla_protection": {
     "name": "Vanilla Enchantment: Protection",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/vanilla_quitoxic": {
     "name": "Vanilla Enchantment: Quitoxic",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/vanilla_swift_sneak": {
     "name": "Vanilla Enchantment: Swift Sneak",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/vanilla_treasure": {
     "name": "Vanilla Enchantment: Treasure",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/vanilla_trident": {
     "name": "Vanilla Enchantment: Trident",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/vanilla_unbreaking": {
     "name": "Vanilla Enchantment: Unbreaking",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/vanilla_water": {
     "name": "Vanilla Enchantment: Water",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/vanilla_water_luck": {
     "name": "Vanilla Enchantment: Water Luck",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/vanilla_trial_treasure": {
     "name": "Vanilla Enchantment: Trial Treasure",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/vanilla_trial": {
     "name": "Vanilla Enchantment: Trial",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/enchantments/vanilla_trial_breaching": {
     "name": "Vanilla Enchantment: Breaching",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:place_pedestal": {
     "name": "Place a Pedestal",
     "desc": "",
+    "req": "Craft, placce and interact with a pedestal crafting station",
     "guide": "",
     "link": ""
   },
   "spectrum:build_basic_pedestal_structure": {
     "name": "Build Basic Pedestal Structure",
     "desc": "",
+    "req": "Build and interact with the Basic Pedestal Structure",
     "guide": "",
     "link": ""
   },
   "spectrum:midgame/build_advanced_pedestal_structure": {
     "name": "Build Advanced Pedestal Structure",
     "desc": "",
+    "req": "upgrade your pedestal crafting station to the Advanced Pedestal Structure and interact with it",
     "guide": "",
     "link": ""
   },
   "spectrum:lategame/build_complex_pedestal_structure": {
     "name": "Build Complex Pedestal Structure",
     "desc": "",
+    "req": "Build and interact with the Complex Pedestal Structure",
     "guide": "",
     "link": ""
   },
   "spectrum:lategame/build_complex_pedestal_structure_without_moonstone": {
     "name": "Complex Pedestal (No Moonstone)",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:lategame/killed_monstrosity": {
     "name": "Kill the Monstrosity",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/items/bottle_of_fading": {
     "name": "Unlock: Bottle of Fading",
-    "desc": "",
+    "desc": "What should not be",
+    "req": "Collect Shimmerstone Gem",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/items/bottle_of_failing": {
     "name": "Unlock: Bottle of Failing",
-    "desc": "",
+    "desc": "What should not be",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/items/bottle_of_forfeiture": {
     "name": "Unlock: Bottle of Forfeiture",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/items/bottle_of_ruin": {
     "name": "Unlock: Bottle of Ruin",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/items/natures_staff": {
     "name": "Unlock: Nature's Staff",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/trinkets/greater_potion_pendant": {
     "name": "Unlock: Greater Potion Pendant",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/trinkets/lesser_potion_pendant": {
     "name": "Unlock: Lesser Potion Pendant",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/trinkets/azure_dike_belt": {
     "name": "Unlock: Azure Dike Belt",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/trinkets/azure_dike_ring": {
     "name": "Unlock: Azure Dike Ring",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/trinkets/azuresque_dike_core": {
     "name": "Unlock: Azuresque Dike Core",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/trinkets/shieldgrasp_amulet": {
     "name": "Unlock: Shieldgrasp Amulet",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/trinkets/puff_circlet": {
     "name": "Unlock: Puff Circlet",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/trinkets/totem_pendant": {
     "name": "Unlock: Totem Pendant",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/trinkets/take_off_belt": {
     "name": "Unlock: Take-Off Belt",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/trinkets/glow_vision_goggles": {
     "name": "Unlock: Glow Vision Goggles",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/trinkets/fanciful_belt": {
     "name": "Unlock: Fanciful Belt",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/trinkets/pigment_palette": {
     "name": "Unlock: Pigment Palette",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/trinkets/ashen_circlet": {
     "name": "Unlock: Ashen Circlet",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/trinkets/heartsingers_reward": {
     "name": "Unlock: Heartsinger's Reward",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/trinkets/any_azure_dike_equipment": {
     "name": "Unlock: Any Azure Dike Equipment",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/trinkets/any_base_trinket": {
     "name": "Unlock: Any Base Trinket",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/blocks/idols": {
     "name": "Unlock: Idols",
     "desc": "",
+    "req": "",
+    "guide": "",
+    "link": ""
+  },
+    "spectrum:unlocks/items/bottomless_bundle": {
+    "name": "Unlock: Bottomless Bundle",
+    "desc": "",
+    "req": "Collect Quitoxic Reeds",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/resources/bloodstone": {
     "name": "Unlock: Bloodstone",
     "desc": "",
+    "req": "Grow a Kindling to full maturity and harvest it for it's feathers",
+    "guide": "",
+    "link": ""
+  },
+   "spectrum:unlocks/equipment/lucky_pickaxe": {
+    "name": "Enchantment: Lucky Pickaxe",
+    "desc": "Tool unlock",
+    "req": "Collected any Gemstone shard, Shimmerstone and placed a pedestal",
     "guide": "",
     "link": ""
   },
   "spectrum:ascend_kindling": {
     "name": "Ascend Kindling",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:break_cracked_dragonbone": {
     "name": "Break Cracked Dragonbone",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:hidden/collect_hibernating_jade_vine_bulb": {
     "name": "Collect Hibernating Jade Vine Bulb",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:lategame/collect_nectardew": {
     "name": "Collect Nectardew",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:craft_bottle_of_fading": {
     "name": "Craft Bottle of Fading",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:midgame/craft_bottle_of_failing": {
     "name": "Craft Bottle of Failing",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:midgame/create_midnight_aberration": {
     "name": "Create Midnight Aberration",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:midgame/enter_dimension": {
     "name": "Enter Spectrum Dimension",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:lategame/find_excavation_site": {
     "name": "Find Excavation Site",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:lategame/spectrum_lategame": {
     "name": "Lategame Milestone",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:midgame/spectrum_midgame": {
     "name": "Midgame Milestone",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:midgame/break_decayed_bedrock": {
     "name": "Break Decayed Bedrock",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:unlocks/mysterious_locket_socketing": {
     "name": "Unlock: Mysterious Locket Socketing",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:pluck_resplendent_feather": {
     "name": "Pluck Resplendent Feather",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:solve_wireless_redstone_preservation_ruin": {
     "name": "Solve Wireless Redstone Ruin",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:lategame/strike_up_hummingstone_hymn": {
     "name": "Strike Up Hummingstone Hymn",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:mod_integration/neepmeat/vivisect_kindling": {
     "name": "Vivisect Kindling (Neepmeat)",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:collect_all_basic_pigments_besides_brown": {
     "name": "Collect All Non-Brown Pigments",
-    "desc": "",
+    "desc": "Brown is Weird",
+    "req": "Collect all basic colored pigments besides brown",
     "guide": "",
     "link": ""
   },
   "spectrum:hidden/collect_shards/topaz": {
     "name": "Hidden: Collect Topaz",
     "desc": "",
+    "req": "Topaz Geode are found at Y82 and above in the Overworld. They can be mined with any stone or greater pickaxe.",
     "guide": "",
     "link": ""
   },
   "spectrum:hidden/collect_shards/amethyst": {
     "name": "Hidden: Collect Amethyst",
     "desc": "",
+    "req": "Amethyst Geode are found between Y-levels -58 and 30, and they appear in all Biomes",
     "guide": "",
     "link": ""
   },
   "spectrum:hidden/collect_shards/citrine": {
     "name": "Hidden: Collect Citrine",
     "desc": "",
+    "req": "Citrine Geodes are found, in warmer Biomes underground Found between Y-levesl 65 and 30.",
     "guide": "",
     "link": ""
   },
   "spectrum:create_onyx_shard": {
     "name": "Create Onyx Shard",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:lategame/collect_moonstone": {
     "name": "Collect Moonstone",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:midgame/collect_azurite": {
     "name": "Collect Azurite",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:lategame/collect_malachite": {
     "name": "Collect Malachite",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:lategame/find_forgotten_city": {
     "name": "Find the Forgotten City",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:lategame/collect_myceylon": {
     "name": "Collect Myceylon",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:midgame/collect_jade_vine_petals": {
     "name": "Collect Jade Vine Petals",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:midgame/build_spirit_instiller_structure": {
     "name": "Build Spirit Instiller Structure",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:spirit_instiller/secret/germinated_jade_vine_crossbreeding": {
     "name": "Jade Vine Crossbreeding",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:midgame/failed_creating_player_spawner": {
     "name": "Failed Creating Player Spawner",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:midgame/failed_creating_empty_or_blacklisted_spawner": {
     "name": "Failed Creating Empty/Blacklisted Spawner",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:lategame/collect_aether_graced_nectar_gloves": {
     "name": "Collect Aether-Graced Nectar Gloves",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:spectrum": {
     "name": "Spectrum Root",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:collect_shimmerstone": {
     "name": "Collect Shimmerstone",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:collect_any_basic_shard": {
     "name": "Collect Any Basic Shard",
-    "desc": "",
+    "desc": "Unlocks Spectrum Advancements",
+    "req": "Collect any of the 3 basic shards: Topaz, Amethyst, or Citrine",
     "guide": "",
     "link": ""
   },
   "spectrum:collect_all_basic_shards": {
     "name": "Collect All Basic Shards",
     "desc": "",
+    "req": "Collect all of the basic shards: Topaz, Citrine, and Amethyst",
     "guide": "",
     "link": ""
   },
   "spectrum:collect_all_basic_pigments": {
     "name": "Collect All Basic Pigments",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:collect_gemstone_powder": {
     "name": "Collect Gemstone Powder",
-    "desc": "",
+    "desc": "Collect any Gemstone powder",
+    "req": "Drop an anvil on any Gemstone shard to break it into powder",
     "guide": "",
     "link": ""
   },
   "spectrum:craft_using_pedestal": {
     "name": "Craft Using Pedestal",
     "desc": "",
+    "req": "Just what it says - craft something using a pedestal crafting station",
     "guide": "",
     "link": ""
   },
   "spectrum:craft_cmy_pedestal": {
     "name": "Craft CMY Pedestal",
     "desc": "",
+    "req": "use one shard from each of the three basic Gemstone types to craft a CMY Pedestal",
     "guide": "",
     "link": ""
   },
   "spectrum:craft_onyx_pedestal": {
     "name": "Craft Onyx Pedestal",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:build_fusion_shrine": {
     "name": "Build Fusion Shrine",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:collect_amaranth": {
     "name": "Collect Amaranth",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:collect_amaranth_bushel": {
     "name": "Collect Amaranth Bushel",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:collect_four_leaf_clover": {
     "name": "Collect Four Leaf Clover",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:collect_mermaids_gem": {
     "name": "Collect Mermaid's Gem",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:collect_nightdew": {
     "name": "Collect Nightdew",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:collect_quitoxic_reeds": {
     "name": "Collect Quitoxic Reeds",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:collect_radiating_ender": {
     "name": "Collect Radiating Ender",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:collect_star_fragment": {
     "name": "Collect Star Fragment",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:collect_vegetal": {
     "name": "Collect Vegetal",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:catch_shooting_star": {
     "name": "Catch a Shooting Star",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:collect_all_shooting_star_variants": {
     "name": "Collect All Shooting Star Variants",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:remember_kindling": {
     "name": "Remember Kindling",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:break_gemstone_ore": {
     "name": "Break Gemstone Ore",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:dark_radiance_staff": {
     "name": "Dark Radiance Staff",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:craft_colored_sapling": {
     "name": "Craft Colored Sapling",
-    "desc": "",
+    "desc": "All Around me are familiar faces, worn out places, worn out faces",
+    "req": "Craft a colored sapling of any color of dyes, and vegetal using a pedestal crafting station",
     "guide": "",
     "link": ""
   },
   "spectrum:craft_salted_jaramel_trifle_or_tart": {
     "name": "Craft Salted Jaramel Trifle or Tart",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:drink_tea_with_scone": {
     "name": "Drink Tea with Scone",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:eat_each_pastry": {
     "name": "Eat Every Pastry",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:consume_purple_star_candy": {
     "name": "Consume Purple Star Candy",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:enter_ender_glass": {
     "name": "Enter Ender Glass",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:enter_color_mixing_preservation_ruin": {
     "name": "Enter Color Mixing Preservation Ruin",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:enter_dike_gate_preservation_ruin": {
     "name": "Enter Dike Gate Preservation Ruin",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:enter_wireless_redstone_preservation_ruin": {
     "name": "Enter Wireless Redstone Preservation Ruin",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:fail_to_glitch_into_preservation_ruin": {
     "name": "Failed Glitch into Preservation Ruin",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:fail_to_take_item_out_of_pedestal": {
     "name": "Failed to Take Item from Pedestal",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:fill_bottomless_bundle": {
     "name": "Fill Bottomless Bundle",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:fill_bottomless_bundle_for_real_this_time": {
     "name": "Really Fill the Bottomless Bundle",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:find_preservation_ruins": {
     "name": "Find Preservation Ruins",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:fish_an_entity": {
     "name": "Fish an Entity",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:fish_in_lava": {
     "name": "Fish in Lava",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:get_hit_while_wearing_full_suit_of_gemstone_armor": {
     "name": "Hit While in Full Gemstone Armor",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:gift_or_open_present": {
     "name": "Gift or Open a Present",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:gift_wet_lava_sponge": {
     "name": "Gift a Wet Lava Sponge",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:grow_bloodstone_in_crystallarieum": {
     "name": "Grow Bloodstone in Crystallarieum",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:hook_entity_with_molten_rod": {
     "name": "Hook Entity with Molten Rod",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:place_incandescent_amalgam": {
     "name": "Place Incandescent Amalgam",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:place_moonstone_in_preservation_ruins": {
     "name": "Place Moonstone in Preservation Ruins",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:pluck_effulgent_feather": {
     "name": "Pluck Effulgent Feather",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:revive_dead_bush": {
     "name": "Revive a Dead Bush",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:solve_color_mixing_preservation_ruin": {
     "name": "Solve Color Mixing Ruin",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:solve_dike_gate_preservation_ruin": {
     "name": "Solve Dike Gate Ruin",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:start_crafting_time_consuming_pedestal_recipe": {
     "name": "Start Time-Consuming Pedestal Recipe",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:survive_drinking_incandescent_amalgam": {
     "name": "Survive Drinking Incandescent Amalgam",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:tap_aged_air": {
     "name": "Tap Aged Air",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:tap_mermaids_jam": {
     "name": "Tap Mermaid's Jam",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:tap_poisonous_vodka": {
     "name": "Tap Poisonous Vodka",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:tap_pure_alcohol": {
     "name": "Tap Pure Alcohol",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:tap_suspicious_brew": {
     "name": "Tap Suspicious Brew",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:tap_titration_barrel": {
     "name": "Tap Titration Barrel",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:use_glistering_melon_seeds": {
     "name": "Use Glistering Melon Seeds",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:use_oblivion_pickaxe_with_efficiency": {
     "name": "Use Oblivion Pickaxe with Efficiency",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:hidden/opened_guidebook": {
     "name": "Hidden: Opened Guidebook",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   },
   "spectrum:hidden/collect_shale_clay": {
     "name": "Hidden: Collect Shale Clay",
     "desc": "",
+    "req": "",
     "guide": "",
     "link": ""
   }
