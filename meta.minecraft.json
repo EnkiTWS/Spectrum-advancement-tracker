@@ -1,0 +1,828 @@
+{
+  "minecraft:story/root": {
+    "name": "Minecraft",
+    "desc": "The heart and story of the game",
+    "req": "Have a crafting table in the inventory.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Minecraft"
+  },
+  "minecraft:story/mine_stone": {
+    "name": "Stone Age",
+    "desc": "Mine stone with your new pickaxe",
+    "req": "Mine Cobblestone, Blackstone, or Deepslate.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Stone_Age"
+  },
+  "minecraft:story/upgrade_tools": {
+    "name": "Getting an Upgrade",
+    "desc": "Construct a better pickaxe",
+    "req": "Craft a Stone Pickaxe.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Getting_an_Upgrade"
+  },
+  "minecraft:story/smelt_iron": {
+    "name": "Acquire Hardware",
+    "desc": "Smelt an iron ingot",
+    "req": "Have an iron ingot in the inventory.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Acquire_Hardware"
+  },
+  "minecraft:story/obtain_armor": {
+    "name": "Suit Up",
+    "desc": "Protect yourself with a piece of iron armor",
+    "req": "Put on any piece of Iron Armor.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Suit_Up"
+  },
+  "minecraft:story/lava_bucket": {
+    "name": "Hot Stuff",
+    "desc": "Fill a bucket with lava",
+    "req": "Fill a bucket with lava.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Hot_Stuff"
+  },
+  "minecraft:story/iron_tools": {
+    "name": "Isn't It Iron Pick",
+    "desc": "Upgrade your pickaxe",
+    "req": "Craft an Iron Pickaxe.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Isn't_It_Iron_Pick"
+  },
+  "minecraft:story/deflect_arrow": {
+    "name": "Not Today, Thank You",
+    "desc": "Deflect a projectile with a shield",
+    "req": "Block an arrow or other projectile with a shield.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Not_Today,_Thank_You"
+  },
+  "minecraft:story/form_obsidian": {
+    "name": "Ice Bucket Challenge",
+    "desc": "Obtain a block of obsidian",
+    "req": "Have Obsidian in your inventory.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Ice_Bucket_Challenge"
+  },
+  "minecraft:story/mine_diamond": {
+    "name": "Diamonds!",
+    "desc": "Acquire diamonds",
+    "req": "Have a Diamond in your inventory.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Diamonds!"
+  },
+  "minecraft:story/enter_the_nether": {
+    "name": "We Need to Go Deeper",
+    "desc": "Build, light, and enter a Nether portal",
+    "req": "Enter the Nether dimension.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#We_Need_to_Go_Deeper"
+  },
+  "minecraft:story/shiny_gear": {
+    "name": "Cover Me with Diamonds",
+    "desc": "Diamond armor saves lives",
+    "req": "Have any piece of Diamond Armor.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Cover_Me_with_Diamonds"
+  },
+  "minecraft:story/enchant_item": {
+    "name": "Enchanter",
+    "desc": "Enchant an item at an Enchanting Table",
+    "req": "Use an Enchanting Table on an item.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Enchanter"
+  },
+  "minecraft:story/cure_zombie_villager": {
+    "name": "Zombie Doctor",
+    "desc": "Weaken and then cure a zombie villager",
+    "req": "Use a Golden Apple on a weakened Zombie Villager.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Zombie_Doctor"
+  },
+  "minecraft:story/follow_ender_eye": {
+    "name": "Eye Spy",
+    "desc": "Follow an Eye of Ender",
+    "req": "Enter a Stronghold.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Eye_Spy"
+  },
+  "minecraft:story/enter_the_end": {
+    "name": "The End?",
+    "desc": "Enter the End portal",
+    "req": "Enter the End dimension.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#The_End%3F"
+  },
+  "minecraft:nether/root": {
+    "name": "Nether",
+    "desc": "Bring summer clothes",
+    "req": "Enter the Nether.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Nether"
+  },
+  "minecraft:nether/return_to_sender": {
+    "name": "Return to Sender",
+    "desc": "Destroy a Ghast with a fireball",
+    "req": "Kill a Ghast with its own fireball.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Return_to_Sender"
+  },
+  "minecraft:nether/find_bastion": {
+    "name": "Those Were the Days",
+    "desc": "Enter a Bastion Remnant",
+    "req": "Enter a Bastion Remnant structure.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Those_Were_the_Days"
+  },
+  "minecraft:nether/obtain_ancient_debris": {
+    "name": "Hidden in the Depths",
+    "desc": "Obtain Ancient Debris",
+    "req": "Have Ancient Debris in your inventory.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Hidden_in_the_Depths"
+  },
+  "minecraft:nether/fast_travel": {
+    "name": "Subspace Bubble",
+    "desc": "Use the Nether to travel 7km in the Overworld",
+    "req": "Travel 7000 blocks in the Overworld using the Nether.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Subspace_Bubble"
+  },
+  "minecraft:nether/find_fortress": {
+    "name": "A Terrible Fortress",
+    "desc": "Break your way into a Nether Fortress",
+    "req": "Enter a Nether Fortress.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#A_Terrible_Fortress"
+  },
+  "minecraft:nether/obtain_crying_obsidian": {
+    "name": "Who is Cutting Onions?",
+    "desc": "Obtain Crying Obsidian",
+    "req": "Have Crying Obsidian in your inventory.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Who_is_Cutting_Onions%3F"
+  },
+  "minecraft:nether/distract_piglin": {
+    "name": "Oh Shiny",
+    "desc": "Distract piglins with gold",
+    "req": "Give a Piglin gold while it is aggravated.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Oh_Shiny"
+  },
+  "minecraft:nether/ride_strider": {
+    "name": "This Boat Has Legs",
+    "desc": "Ride a Strider with a Warped Fungus on a Stick",
+    "req": "Ride a Strider and use fungus to boost its speed.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#This_Boat_Has_Legs"
+  },
+  "minecraft:nether/uneasy_alliance": {
+    "name": "Uneasy Alliance",
+    "desc": "Rescue a Ghast from the Nether",
+    "req": "Kill a Ghast while it is in the Overworld.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Uneasy_Alliance"
+  },
+  "minecraft:nether/loot_bastion": {
+    "name": "War Pigs",
+    "desc": "Loot a chest in a Bastion Remnant",
+    "req": "Open a chest in a Bastion Remnant.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#War_Pigs"
+  },
+  "minecraft:nether/netherite_armor": {
+    "name": "Cover Me in Debris",
+    "desc": "Get a full suit of Netherite armor",
+    "req": "Have a full set of Netherite armor in your inventory.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Cover_Me_in_Debris"
+  },
+  "minecraft:nether/get_wither_skull": {
+    "name": "Spooky Scary Skeleton",
+    "desc": "Obtain a Wither Skeleton's head",
+    "req": "Have a Wither Skeleton Skull in your inventory.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Spooky_Scary_Skeleton"
+  },
+  "minecraft:nether/obtain_blaze_rod": {
+    "name": "Into Fire",
+    "desc": "Relieve a Blaze of its rod",
+    "req": "Have a Blaze Rod in your inventory.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Into_Fire"
+  },
+  "minecraft:nether/charge_respawn_anchor": {
+    "name": "Not Quite \"Nine\" Lives",
+    "desc": "Charge a Respawn Anchor to the maximum",
+    "req": "Fully charge a Respawn Anchor with Glowstone.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Not_Quite_%22Nine%22_Lives"
+  },
+  "minecraft:nether/ride_strider_in_overworld_lava": {
+    "name": "Feels Like Home",
+    "desc": "Take a Strider for a long ride on lava in the Overworld",
+    "req": "Travel 50 blocks on Overworld lava while riding a Strider.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Feels_Like_Home"
+  },
+  "minecraft:nether/explore_nether": {
+    "name": "Hot Tourist Destinations",
+    "desc": "Explore all Nether biomes",
+    "req": "Visit all 5 Nether biomes.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Hot_Tourist_Destinations"
+  },
+  "minecraft:nether/summon_wither": {
+    "name": "Withering Heights",
+    "desc": "Summon the Wither",
+    "req": "Spawn the Wither boss.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Withering_Heights"
+  },
+  "minecraft:nether/brew_potion": {
+    "name": "Local Brewery",
+    "desc": "Brew a potion",
+    "req": "Pick up a potion from a Brewing Stand.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Local_Brewery"
+  },
+  "minecraft:nether/create_beacon": {
+    "name": "Bring Home the Beacon",
+    "desc": "Construct and place a Beacon",
+    "req": "Activate a Beacon.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Bring_Home_the_Beacon"
+  },
+  "minecraft:nether/all_potions": {
+    "name": "A Furious Cocktail",
+    "desc": "Have every potion effect applied at the same time",
+    "req": "Have all 13 primary potion effects active simultaneously.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#A_Furious_Cocktail"
+  },
+  "minecraft:nether/create_full_beacon": {
+    "name": "Beaconator",
+    "desc": "Bring a Beacon to full power",
+    "req": "Power a Beacon with a 4-layer pyramid.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Beaconator"
+  },
+  "minecraft:nether/all_effects": {
+    "name": "How Did We Get Here?",
+    "desc": "Have every effect applied at the same time",
+    "req": "Have all 30+ possible status effects active at once.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#How_Did_We_Get_Here%3F"
+  },
+  "minecraft:end/root": {
+    "name": "The End",
+    "desc": "Or the beginning?",
+    "req": "Enter the End.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#The_End"
+  },
+  "minecraft:end/kill_dragon": {
+    "name": "Free the End",
+    "desc": "Good luck",
+    "req": "Kill the Ender Dragon.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Free_the_End"
+  },
+  "minecraft:end/dragon_egg": {
+    "name": "The Next Generation",
+    "desc": "Hold the dragon egg",
+    "req": "Have the Dragon Egg in your inventory.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#The_Next_Generation"
+  },
+  "minecraft:end/enter_end_gateway": {
+    "name": "Remote Gateway",
+    "desc": "Escape the island",
+    "req": "Enter an End Gateway to reach the outer islands.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Remote_Gateway"
+  },
+  "minecraft:end/respawn_dragon": {
+    "name": "The End... Again...",
+    "desc": "Respawn the Ender Dragon",
+    "req": "Use End Crystals to summon the dragon again.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#The_End..._Again..."
+  },
+  "minecraft:end/dragon_breath": {
+    "name": "You Need a Mint",
+    "desc": "Collect dragon's breath in a glass bottle",
+    "req": "Bottle the purple breath from the Ender Dragon.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#You_Need_a_Mint"
+  },
+  "minecraft:end/find_end_city": {
+    "name": "City at the End of the Game",
+    "desc": "Go on in, what could happen?",
+    "req": "Enter an End City.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#City_at_the_End_of_the_Game"
+  },
+  "minecraft:end/elytra": {
+    "name": "Sky's the Limit",
+    "desc": "Find Elytra",
+    "req": "Have Elytra in your inventory.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Sky's_the_Limit"
+  },
+  "minecraft:end/levitate": {
+    "name": "Great View From Up Here",
+    "desc": "Levitate up 50 blocks from Shulker attacks",
+    "req": "Use Shulker bullets to float high into the air.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Great_View_From_Up_Here"
+  },
+  "minecraft:adventure/root": {
+    "name": "Adventure",
+    "desc": "Adventure, exploration, and combat",
+    "req": "Kill any mob or be killed by one.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Adventure"
+  },
+  "minecraft:adventure/voluntary_exile": {
+    "name": "Voluntary Exile",
+    "desc": "Kill a raid captain",
+    "req": "Kill a Pillager Captain with a banner.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Voluntary_Exile"
+  },
+  "minecraft:adventure/hero_of_the_village": {
+    "name": "Hero of the Village",
+    "desc": "Successfully defend a village from a raid",
+    "req": "Complete a Raid.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Hero_of_the_Village"
+  },
+  "minecraft:adventure/kill_a_mob": {
+    "name": "Monster Hunter",
+    "desc": "Kill any hostile monster",
+    "req": "Kill one of the many hostile mobs.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Monster_Hunter"
+  },
+  "minecraft:adventure/kill_all_mobs": {
+    "name": "Monsters Hunted",
+    "desc": "Kill one of every hostile monster",
+    "req": "Kill all 35+ hostile mob types.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Monsters_Hunted"
+  },
+  "minecraft:adventure/sniper_duel": {
+    "name": "Sniper Duel",
+    "desc": "Kill a Skeleton from at least 50 meters away",
+    "req": "Kill a skeleton with a bow from a distance.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Sniper_Duel"
+  },
+  "minecraft:adventure/bullseye": {
+    "name": "Bullseye",
+    "desc": "Hit the bullseye of a Target block from 30m",
+    "req": "Hit a Target block's center from a distance.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Bullseye"
+  },
+  "minecraft:adventure/lighten_up": {
+    "name": "Lighten Up",
+    "desc": "Scrape a copper bulb with an axe",
+    "req": "Use an axe on a Copper Bulb to increase light.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Lighten_Up"
+  },
+  "minecraft:adventure/who_needs_rockets": {
+    "name": "Who Needs Rockets?",
+    "desc": "Launch yourself 8 blocks up with a Wind Charge",
+    "req": "Use a Wind Charge to jump high.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Who_Needs_Rockets%3F"
+  },
+  "minecraft:adventure/blowback": {
+    "name": "Blowback",
+    "desc": "Kill a Breeze with its own Wind Charge",
+    "req": "Reflect a Breeze's projectile back at it.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Blowback"
+  },
+  "minecraft:adventure/under_lock_and_key": {
+    "name": "Under Lock and Key",
+    "desc": "Use a Trial Key on a Vault",
+    "req": "Open a standard Vault.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Under_Lock_and_Key"
+  },
+  "minecraft:adventure/revaulting": {
+    "name": "Revaulting",
+    "desc": "Use an Ominous Trial Key on an Ominous Vault",
+    "req": "Open an Ominous Vault.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Revaulting"
+  },
+  "minecraft:adventure/overoverkill": {
+    "name": "Over-Overkill",
+    "desc": "Deal 50 hearts of damage in a single hit",
+    "req": "Deal 50 hearts of damage in one hit with a Mace.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Over-Overkill"
+  },
+  "minecraft:adventure/trade": {
+    "name": "What a Deal!",
+    "desc": "Successfully trade with a Villager",
+    "req": "Trade with a Villager or Wandering Trader.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#What_a_Deal!"
+  },
+  "minecraft:adventure/sleep_in_bed": {
+    "name": "Sweet Dreams",
+    "desc": "Sleep in a Bed to change your respawn point",
+    "req": "Sleep in a Bed.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Sweet_Dreams"
+  },
+  "minecraft:adventure/adventuring_time": {
+    "name": "Adventuring Time",
+    "desc": "Discover every biome",
+    "req": "Visit all 50+ Overworld biomes.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Adventuring_Time"
+  },
+  "minecraft:adventure/play_jukebox_in_meadows": {
+    "name": "Sound of Music",
+    "desc": "Make the Meadows come alive with music",
+    "req": "Play a Music Disc in a Jukebox in a Meadow biome.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Sound_of_Music"
+  },
+  "minecraft:adventure/walk_on_powder_snow_with_leather_boots": {
+    "name": "Light as a Rabbit",
+    "desc": "Walk on Powder Snow... without sinking",
+    "req": "Walk on Powder Snow while wearing Leather Boots.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Light_as_a_Rabbit"
+  },
+  "minecraft:adventure/spyglass_at_parrot": {
+    "name": "Is It a Bird?",
+    "desc": "Look at a Parrot through a Spyglass",
+    "req": "Use a Spyglass to look at a Parrot.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Is_It_a_Bird%3F"
+  },
+  "minecraft:adventure/spyglass_at_ghast": {
+    "name": "Is It a Balloon?",
+    "desc": "Look at a Ghast through a Spyglass",
+    "req": "Use a Spyglass to look at a Ghast.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Is_It_a_Balloon%3F"
+  },
+  "minecraft:adventure/spyglass_at_dragon": {
+    "name": "Is It a Plane?",
+    "desc": "Look at the Ender Dragon through a Spyglass",
+    "req": "Use a Spyglass to look at the Ender Dragon.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Is_It_a_Plane%3F"
+  },
+  "minecraft:adventure/fall_from_world_height": {
+    "name": "Caves & Cliffs",
+    "desc": "Free fall from the top to the bottom of the world",
+    "req": "Fall from Y=319 to Y=-59 and survive.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Caves_%26_Cliffs"
+  },
+  "minecraft:adventure/trade_at_world_height": {
+    "name": "Star Trader",
+    "desc": "Trade with a Villager at the build height limit",
+    "req": "Trade with a Villager at Y=318 or higher.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Star_Trader"
+  },
+  "minecraft:adventure/trim_with_any_armor_pattern": {
+    "name": "Crafting a New Look",
+    "desc": "Craft a trimmed armor at a Smithing Table",
+    "req": "Use a Smithing Template to trim armor.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Crafting_a_New_Look"
+  },
+  "minecraft:adventure/trim_with_all_exclusive_armor_patterns": {
+    "name": "Smithing with Style",
+    "desc": "Apply all exclusive smithing templates at least once",
+    "req": "Apply Spire, Snout, Rib, Ward, Silence, Vex, Tide, and Wayfinder trims.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Smithing_with_Style"
+  },
+  "minecraft:adventure/salvage_sherd": {
+    "name": "Respecting the Remnants",
+    "desc": "Brush a Suspicious block to obtain a Pottery Sherd",
+    "req": "Use a Brush on Suspicious Sand or Gravel.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Respecting_the_Remnants"
+  },
+  "minecraft:adventure/craft_decorated_pot_using_only_sherds": {
+    "name": "Careful Restoration",
+    "desc": "Make a Decorated Pot out of 4 Pottery Sherds",
+    "req": "Craft a Decorated Pot using 4 Sherds.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Careful_Restoration"
+  },
+  "minecraft:adventure/avoid_vibration": {
+    "name": "Sneak 100",
+    "desc": "Sneak near a Sculk Sensor or Warden",
+    "req": "Sneak near a Sculk Sensor or Warden without being detected.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Sneak_100"
+  },
+  "minecraft:adventure/kill_mob_near_sculk_catalyst": {
+    "name": "It Spreads",
+    "desc": "Kill a mob near a Sculk Catalyst",
+    "req": "Kill a mob that drops XP near a Sculk Catalyst.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#It_Spreads"
+  },
+  "minecraft:adventure/throw_trident": {
+    "name": "A Throwaway Joke",
+    "desc": "Throw a Trident at something",
+    "req": "Hit a mob with a thrown Trident.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#A_Throwaway_Joke"
+  },
+  "minecraft:adventure/very_very_frightening": {
+    "name": "Very Very Frightening",
+    "desc": "Strike a Villager with lightning",
+    "req": "Use a Channeling Trident to strike a Villager with lightning.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Very_Very_Frightening"
+  },
+  "minecraft:adventure/shoot_arrow": {
+    "name": "Take Aim",
+    "desc": "Shoot something with an Arrow",
+    "req": "Hit a mob with an arrow from a Bow or Crossbow.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Take_Aim"
+  },
+  "minecraft:adventure/totem_of_undying": {
+    "name": "Postmortal",
+    "desc": "Use a Totem of Undying to cheat death",
+    "req": "Activate a Totem of Undying.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Postmortal"
+  },
+  "minecraft:adventure/two_birds_one_arrow": {
+    "name": "Two Birds, One Arrow",
+    "desc": "Kill two Phantoms with a piercing Arrow",
+    "req": "Use a Piercing Crossbow to kill 2 Phantoms with one shot.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Two_Birds,_One_Arrow"
+  },
+  "minecraft:adventure/whos_the_pillager_now": {
+    "name": "Who's the Pillager Now?",
+    "desc": "Give a Pillager a taste of their own medicine",
+    "req": "Kill a Pillager with a Crossbow.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Who's_the_Pillager_Now%3F"
+  },
+  "minecraft:adventure/arbalistic": {
+    "name": "Arbalistic",
+    "desc": "Kill five unique mobs with one crossbow shot",
+    "req": "Use a Piercing Crossbow to kill 5 different mob types at once.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Arbalistic"
+  },
+  "minecraft:adventure/honey_block_slide": {
+    "name": "Sticky Situation",
+    "desc": "Jump into a Honey Block to break your fall",
+    "req": "Slide down the side of a Honey Block.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Sticky_Situation"
+  },
+  "minecraft:adventure/ol_betsy": {
+    "name": "Ol' Betsy",
+    "desc": "Shoot a Crossbow",
+    "req": "Fire a Crossbow.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Ol'_Betsy"
+  },
+  "minecraft:adventure/lightning_rod_with_villager_no_fire": {
+    "name": "Surge Protector",
+    "desc": "Protect a Villager from lightning without starting a fire",
+    "req": "Have a Lightning Rod protect a Villager.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Surge_Protector"
+  },
+  "minecraft:adventure/use_lodestone": {
+    "name": "Country Lode, Take Me Home",
+    "desc": "Use a Compass on a Lodestone",
+    "req": "Use a Compass on a Lodestone.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Country_Lode,_Take_Me_Home"
+  },
+  "minecraft:husbandry/root": {
+    "name": "Husbandry",
+    "desc": "The world is full of friends and food",
+    "req": "Eat anything or drink a potion.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Husbandry"
+  },
+  "minecraft:husbandry/safely_harvest_honey": {
+    "name": "Bee Our Guest",
+    "desc": "Use a Campfire to collect Honey",
+    "req": "Collect honey from a hive with a campfire underneath.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Bee_Our_Guest"
+  },
+  "minecraft:husbandry/breed_an_animal": {
+    "name": "The Parrots and the Bats",
+    "desc": "Breed two animals together",
+    "req": "Breed any two animals.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#The_Parrots_and_the_Bats"
+  },
+  "minecraft:husbandry/bred_all_animals": {
+    "name": "Two by Two",
+    "desc": "Breed all the animals!",
+    "req": "Breed all 20+ types of breedable animals.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Two_by_Two"
+  },
+  "minecraft:husbandry/balanced_diet": {
+    "name": "A Balanced Diet",
+    "desc": "Eat everything that is edible",
+    "req": "Consume all 40+ types of food.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#A_Balanced_Diet"
+  },
+  "minecraft:husbandry/plant_seed": {
+    "name": "A Seedy Place",
+    "desc": "Plant a seed and watch it grow",
+    "req": "Plant a seed in tilled soil.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#A_Seedy_Place"
+  },
+  "minecraft:husbandry/tame_an_animal": {
+    "name": "Best Friends Forever",
+    "desc": "Tame an animal",
+    "req": "Tame any tameable mob.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Best_Friends_Forever"
+  },
+  "minecraft:husbandry/complete_catalogue": {
+    "name": "A Complete Catalogue",
+    "desc": "Tame all Cat variants!",
+    "req": "Tame all 11 cat types.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#A_Complete_Catalogue"
+  },
+  "minecraft:husbandry/fishy_business": {
+    "name": "Fishy Business",
+    "desc": "Catch a fish",
+    "req": "Catch any fish with a Fishing Rod.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Fishy_Business"
+  },
+  "minecraft:husbandry/tactical_fishing": {
+    "name": "Tactical Fishing",
+    "desc": "Catch a Fish ... without a Fishing Rod!",
+    "req": "Catch a fish using a bucket.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Tactical_Fishing"
+  },
+  "minecraft:husbandry/silk_touch_nest": {
+    "name": "Total Beelocation",
+    "desc": "Move a Bee Nest with 3 bees inside",
+    "req": "Use Silk Touch to pick up a populated Bee Nest.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Total_Beelocation"
+  },
+  "minecraft:husbandry/axolotl_in_a_bucket": {
+    "name": "The Cutest Predator",
+    "desc": "Catch an Axolotl in a Bucket",
+    "req": "Use a Water Bucket on an Axolotl.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#The_Cutest_Predator"
+  },
+  "minecraft:husbandry/kill_axolotl_target": {
+    "name": "The Healing Power of Friendship!",
+    "desc": "Team up with an axolotl and win a fight",
+    "req": "Kill a mob that an Axolotl is attacking.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#The_Healing_Power_of_Friendship!"
+  },
+  "minecraft:husbandry/make_a_sign_glow": {
+    "name": "Glow and Behold!",
+    "desc": "Make the text of any kind of sign glow",
+    "req": "Use a Glow Ink Sac on a Sign.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Glow_and_Behold!"
+  },
+  "minecraft:husbandry/wax_on": {
+    "name": "Wax On",
+    "desc": "Apply Honeycomb to a Copper block!",
+    "req": "Use a Honeycomb on any Copper block variant.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Wax_On"
+  },
+  "minecraft:husbandry/wax_off": {
+    "name": "Wax Off",
+    "desc": "Scrape Wax off of a Copper block!",
+    "req": "Use an Axe on a Waxed Copper block.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Wax_Off"
+  },
+  "minecraft:husbandry/tadpole_in_a_bucket": {
+    "name": "Bukkit Bukkit",
+    "desc": "Catch a Tadpole in a Bucket",
+    "req": "Use a Water Bucket on a Tadpole.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Bukkit_Bukkit"
+  },
+  "minecraft:husbandry/leash_all_frog_variants": {
+    "name": "When the Squad Hops into Town",
+    "desc": "Get each Frog variant on a Lead",
+    "req": "Leash Temperate, Warm, and Cold Frog variants.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#When_the_Squad_Hops_into_Town"
+  },
+  "minecraft:husbandry/froglights": {
+    "name": "With Our Powers Combined!",
+    "desc": "Have all Froglights in your inventory",
+    "req": "Have Pearlescent, Ochre, and Verdant Froglights.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#With_Our_Powers_Combined!"
+  },
+  "minecraft:husbandry/allay_deliver_item_to_player": {
+    "name": "You've Got a Friend in Me",
+    "desc": "Have an Allay deliver items to you",
+    "req": "Have an Allay bring you items.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#You've_Got_a_Friend_in_Me"
+  },
+  "minecraft:husbandry/allay_deliver_cake_to_note_block": {
+    "name": "Birthday Song",
+    "desc": "Have an Allay drop a Cake at a Note Block",
+    "req": "Use a Note Block to trigger an Allay dropping a Cake.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Birthday_Song"
+  },
+  "minecraft:husbandry/obtain_sniffer_egg": {
+    "name": "Smells Interesting",
+    "desc": "Obtain a Sniffer Egg",
+    "req": "Have a Sniffer Egg in your inventory.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Smells_Interesting"
+  },
+  "minecraft:husbandry/feed_snifflet": {
+    "name": "Little Sniffs",
+    "desc": "Feed a Snifflet",
+    "req": "Feed Torchflower Seeds to a baby Sniffer.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Little_Sniffs"
+  },
+  "minecraft:husbandry/plant_any_sniffer_seed": {
+    "name": "Planting the Past",
+    "desc": "Plant any Sniffer seed",
+    "req": "Plant Torchflower Seeds or a Pitcher Pod.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Planting_the_Past"
+  },
+  "minecraft:husbandry/obtain_netherite_hoe": {
+    "name": "Serious Dedication",
+    "desc": "Use a Netherite Ingot to upgrade a Hoe",
+    "req": "Have a Netherite Hoe in your inventory.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Serious_Dedication"
+  },
+  "minecraft:husbandry/ride_a_boat_with_a_goat": {
+    "name": "Whatever Floats Your Goat!",
+    "desc": "Get in a Boat and float with a Goat",
+    "req": "Enter a Boat with a Goat.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Whatever_Floats_Your_Goat!"
+  },
+  "minecraft:husbandry/brush_armadillo": {
+    "name": "Isn't It Scute?",
+    "desc": "Get Armadillo Scutes using a Brush",
+    "req": "Use a Brush on an Armadillo.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Isn't_It_Scute%3F"
+  },
+  "minecraft:husbandry/repair_wolf_armor": {
+    "name": "Good as New",
+    "desc": "Repair damaged Wolf Armor using Armadillo Scutes",
+    "req": "Repair Wolf Armor while it's equipped on a Wolf.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Good_as_New"
+  },
+  "minecraft:husbandry/whole_pack": {
+    "name": "The Whole Pack",
+    "desc": "Tame all wolf variants",
+    "req": "Tame all 9 wolf types found in different biomes.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#The_Whole_Pack"
+  },
+  "minecraft:husbandry/remove_wolf_armor": {
+    "name": "Shear Brilliance",
+    "desc": "Remove Wolf Armor from a Wolf using Shears",
+    "req": "Use Shears on a Wolf wearing armor.",
+    "guide": "",
+    "link": "https://minecraft.wiki/w/Advancement#Shear_Brilliance"
+  }
+}
