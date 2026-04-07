@@ -316,13 +316,14 @@ tbody tr:nth-child(even) td{background:rgba(255,255,255,.02);}
       <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:10px 12px;background:var(--bg3);border:1px solid var(--border);border-radius:4px;">
         <span style="font-size:13px;color:var(--text2);flex:1;">
           <strong style="color:var(--text);">To share your edits publicly:</strong>
-          Export the JSON below, commit it to your GitHub repo as <code style="font-family:'Share Tech Mono',monospace;color:var(--accent);font-size:12px;">meta.json</code>, and everyone will see your changes on next load.
+          Export below — two separate files. Commit them to your repo and everyone sees the changes on next load.
         </span>
-        <button class="btn-green" onclick="exportMeta()">⬇ Export meta.json</button>
-        <button class="btn-blue" onclick="toggleImport()">⬆ Import meta.json</button>
+        <button class="btn-green" onclick="exportMeta('minecraft')">⬇ Export minecraft</button>
+        <button class="btn-green" onclick="exportMeta('spectrum')">⬇ Export spectrum</button>
+        <button class="btn-blue" onclick="toggleImport()">⬆ Import</button>
       </div>
       <div id="importBox" style="display:none;flex-direction:column;gap:8px;">
-        <textarea class="field-textarea" id="importArea" style="min-height:80px;font-family:'Share Tech Mono',monospace;font-size:11px;" placeholder='Paste meta.json content here and click Import…'></textarea>
+        <textarea class="field-textarea" id="importArea" style="min-height:80px;font-family:'Share Tech Mono',monospace;font-size:11px;" placeholder='Paste meta.minecraft.json or meta.spectrum.json content here and click Import…'></textarea>
         <div style="display:flex;gap:8px;">
           <button class="btn-green" onclick="importMeta()">Apply Import</button>
           <button class="btn-secondary" onclick="toggleImport()">Cancel</button>
@@ -389,23 +390,39 @@ function showToast(msg) {
   el._t = setTimeout(() => el.classList.remove('show'), 1800);
 }
 
-// ── LOAD meta.json ────────────────────────────────────────────────
+// ── LOAD meta files ───────────────────────────────────────────────
+// Loads meta.minecraft.json and meta.spectrum.json separately,
+// merges them into REMOTE_META. Add more files here for new mods.
+const META_FILES = [
+  { file: 'meta.minecraft.json', label: 'minecraft' },
+  { file: 'meta.spectrum.json',  label: 'spectrum'  },
+];
+
 async function loadRemoteMeta() {
   const statusEl = document.getElementById('metaStatus');
-  try {
-    // In development (file://) this will fail due to CORS — that's fine, fall through to local
-    const res = await fetch('meta.json');
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    REMOTE_META = await res.json();
-    const count = Object.keys(REMOTE_META).length;
+  statusEl.textContent = 'loading meta…';
+  statusEl.className = 'meta-status loading';
+  let loaded = 0, failed = 0;
+  for (const {file, label} of META_FILES) {
+    try {
+      const res = await fetch(file);
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      Object.assign(REMOTE_META, data);
+      loaded++;
+    } catch(e) {
+      failed++;
+      console.warn(`Could not load ${file}:`, e.message);
+    }
+  }
+  const count = Object.keys(REMOTE_META).length;
+  if (count > 0) {
     statusEl.textContent = `meta: ${count} entries`;
     statusEl.className = 'meta-status ok';
-  } catch(e) {
-    // Running locally without a server, or meta.json not found yet
+  } else {
     statusEl.textContent = 'meta: local only';
     statusEl.className = 'meta-status err';
   }
-  // Re-render if data already loaded
   if (Object.keys(DATA).length) renderList();
 }
 
@@ -754,8 +771,9 @@ function saveBulkEditor() {
   renderList();
 }
 
-function exportMeta() {
-  // Merge remote base + local overrides into one clean export
+function exportMeta(ns) {
+  // Export only the entries for the given namespace ('minecraft' or 'spectrum')
+  // If no ns given, exports everything as a single file
   const allIds = Array.from(new Set([
     ...Object.keys(REMOTE_META),
     ...Object.keys(LOCAL_META),
@@ -763,15 +781,17 @@ function exportMeta() {
   ]));
   const out = {};
   for (const id of allIds.sort()) {
+    if (ns && !id.startsWith(ns + ':')) continue;
     const m = getMeta(id);
     out[id] = { name: m.name||'', desc: m.desc||'', guide: m.guide||'', link: m.link||'' };
   }
+  const filename = ns ? `meta.${ns}.json` : 'meta.json';
   const blob = new Blob([JSON.stringify(out,null,2)],{type:'application/json'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'meta.json';
+  a.download = filename;
   a.click();
-  showToast('✓ Exported meta.json');
+  showToast(`✓ Exported ${filename}`);
 }
 
 function importMeta() {
