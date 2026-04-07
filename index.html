@@ -16,25 +16,25 @@
   --panel-w:230px;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
-body{background:var(--bg);color:var(--text);font-family:'Rajdhani',sans-serif;font-size:16px;height:100vh;display:flex;flex-direction:column;overflow:hidden;}
+body{background:var(--bg);color:var(--text);font-family:'Rajdhani',sans-serif;font-size:20px;height:100vh;display:flex;flex-direction:column;overflow:hidden;}
 
 /* ── HEADER ── */
 header{height:54px;background:var(--bg2);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 18px;gap:12px;flex-shrink:0;}
-.logo{font-family:'Share Tech Mono',monospace;font-size:17px;color:var(--accent);letter-spacing:2px;white-space:nowrap;}
+.logo{font-family:'Share Tech Mono',monospace;font-size:22px;color:var(--accent);letter-spacing:2px;white-space:nowrap;}
 .logo span{color:var(--text2);}
 .file-zone{display:flex;align-items:center;gap:8px;}
-.file-btn{padding:5px 13px;background:rgba(0,144,255,.12);border:1px solid var(--accent2);color:var(--accent2);font-family:'Rajdhani',sans-serif;font-weight:600;font-size:13px;cursor:pointer;border-radius:3px;transition:all .12s;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;}
+.file-btn{padding:7px 15px;background:rgba(0,144,255,.12);border:1px solid var(--accent2);color:var(--accent2);font-family:'Rajdhani',sans-serif;font-weight:700;font-size:16px;cursor:pointer;border-radius:3px;transition:all .12s;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;}
 .file-btn:hover{background:rgba(0,144,255,.25);}
 #fileInput{display:none;}
-.file-name{font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text3);max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.file-name{font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--text3);max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .stats-bar{display:flex;gap:18px;margin-left:auto;align-items:center;}
 .stat{display:flex;flex-direction:column;align-items:flex-end;}
-.stat-val{font-family:'Share Tech Mono',monospace;font-size:15px;color:var(--accent);}
-.stat-lab{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;}
-.hdr-btn{padding:5px 12px;font-family:'Rajdhani',sans-serif;font-weight:600;font-size:13px;cursor:pointer;border-radius:3px;transition:all .12s;text-transform:uppercase;letter-spacing:.4px;border:1px solid;}
+.stat-val{font-family:'Share Tech Mono',monospace;font-size:19px;color:var(--accent);}
+.stat-lab{font-size:12px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;}
+.hdr-btn{padding:7px 14px;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:16px;cursor:pointer;border-radius:3px;transition:all .12s;text-transform:uppercase;letter-spacing:.4px;border:1px solid;}
 .hdr-btn-orange{background:rgba(255,107,53,.1);border-color:var(--accent3);color:var(--accent3);}
 .hdr-btn-orange:hover{background:rgba(255,107,53,.25);}
-.meta-status{font-family:'Share Tech Mono',monospace;font-size:10px;padding:3px 8px;border-radius:10px;}
+.meta-status{font-family:'Share Tech Mono',monospace;font-size:13px;padding:5px 10px;border-radius:10px;}
 .meta-status.ok{background:rgba(0,201,167,.1);color:var(--accent);border:1px solid rgba(0,201,167,.3);}
 .meta-status.err{background:rgba(255,68,85,.1);color:var(--notdone);border:1px solid rgba(255,68,85,.3);}
 .meta-status.loading{background:rgba(0,144,255,.1);color:var(--accent2);border:1px solid rgba(0,144,255,.3);}
@@ -49,82 +49,82 @@ header{height:54px;background:var(--bg2);border-bottom:1px solid var(--border);d
 .nav-panels{width:var(--panel-w);border-right:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0;overflow:hidden;}
 .panel-sec{display:flex;flex-direction:column;border-bottom:1px solid var(--border);flex-shrink:0;}
 .panel-sec.grow{flex:1;overflow:hidden;}
-.panel-label{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:2px;padding:7px 12px 5px;background:var(--bg);border-bottom:1px solid var(--border);}
+.panel-label{font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text3);text-transform:uppercase;letter-spacing:2px;padding:7px 12px 5px;background:var(--bg);border-bottom:1px solid var(--border);}
 .panel-list{overflow-y:auto;flex:1;}
 .panel-list::-webkit-scrollbar{width:4px;}
 .panel-list::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px;}
-.nav-item{padding:9px 12px;cursor:pointer;display:flex;align-items:center;gap:8px;border-left:2px solid transparent;transition:all .1s;font-weight:500;font-size:15px;}
+.nav-item{padding:11px 14px;cursor:pointer;display:flex;align-items:center;gap:10px;border-left:2px solid transparent;transition:all .1s;font-weight:600;font-size:18px;}
 .nav-item:hover{background:var(--bg3);}
 .nav-item.active{border-left-color:var(--accent);background:rgba(0,201,167,.07);color:var(--accent);}
 .ns-icon{width:20px;height:20px;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;}
 .ns-mc{background:rgba(0,144,255,.2);color:var(--accent2);}
 .ns-sp{background:rgba(0,201,167,.2);color:var(--accent);}
 .ns-other{background:rgba(255,107,53,.2);color:var(--accent3);}
-.folder-item{padding:8px 12px 8px 14px;cursor:pointer;display:flex;align-items:center;gap:6px;font-size:14px;font-weight:500;color:var(--text2);border-left:2px solid transparent;transition:all .1s;}
+.folder-item{padding:10px 14px 10px 16px;cursor:pointer;display:flex;align-items:center;gap:8px;font-size:17px;font-weight:500;color:var(--text2);border-left:2px solid transparent;transition:all .1s;}
 .folder-item:hover{background:var(--bg3);color:var(--text);}
 .folder-item.active{border-left-color:var(--accent2);background:rgba(0,144,255,.06);color:var(--accent2);}
-.f-count{margin-left:auto;font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text3);}
+.f-count{margin-left:auto;font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text3);}
 
 /* ── MAIN ── */
 .main{flex:1;display:flex;flex-direction:column;overflow:hidden;}
 .toolbar{padding:9px 14px;background:var(--bg2);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;flex-shrink:0;flex-wrap:wrap;}
-.breadcrumb{font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text3);display:flex;align-items:center;gap:5px;flex:1;overflow:hidden;min-width:0;}
+.breadcrumb{font-family:'Share Tech Mono',monospace;font-size:15px;color:var(--text3);display:flex;align-items:center;gap:5px;flex:1;overflow:hidden;min-width:0;}
 .breadcrumb .bc-ns{color:var(--accent);}
 .breadcrumb .sep{color:var(--text3);}
 .filter-btns{display:flex;gap:4px;}
-.filter-btn{padding:4px 11px;background:transparent;border:1px solid var(--border2);color:var(--text2);font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:600;cursor:pointer;border-radius:3px;transition:all .1s;text-transform:uppercase;}
+.filter-btn{padding:6px 13px;background:transparent;border:1px solid var(--border2);color:var(--text2);font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:600;cursor:pointer;border-radius:3px;transition:all .1s;text-transform:uppercase;}
 .filter-btn:hover{border-color:var(--accent);color:var(--accent);}
 .filter-btn.fa{background:var(--accent);border-color:var(--accent);color:#000;}
 .filter-btn.fn{background:var(--notdone);border-color:var(--notdone);color:#fff;}
-.sort-sel,.search-box{padding:5px 9px;background:var(--bg3);border:1px solid var(--border);color:var(--text);font-family:'Rajdhani',sans-serif;font-size:14px;border-radius:3px;outline:none;}
+.sort-sel,.search-box{padding:7px 11px;background:var(--bg3);border:1px solid var(--border);color:var(--text);font-family:'Rajdhani',sans-serif;font-size:17px;border-radius:3px;outline:none;}
 .sort-sel{cursor:pointer;}
 .sort-sel option{background:var(--bg2);}
 .search-box{width:160px;}
 .search-box::placeholder{color:var(--text3);}
 .search-box:focus,.sort-sel:focus{border-color:var(--accent2);}
-.list-header{display:grid;grid-template-columns:30px 1fr 90px 170px 30px;padding:6px 12px;background:var(--bg);border-bottom:1px solid var(--border);font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;flex-shrink:0;}
+.list-header{display:grid;grid-template-columns:34px 1fr 110px 210px 34px;padding:8px 14px;background:var(--bg);border-bottom:1px solid var(--border);font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;flex-shrink:0;}
 .list-container{flex:1;overflow-y:auto;}
 .list-container::-webkit-scrollbar{width:6px;}
 .list-container::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px;}
 .adv-row{border-bottom:1px solid var(--border);}
-.adv-main{display:grid;grid-template-columns:30px 1fr 90px 170px 30px;padding:9px 12px;align-items:center;cursor:pointer;transition:background .08s;}
+.adv-main{display:grid;grid-template-columns:34px 1fr 110px 210px 34px;padding:12px 14px;align-items:center;cursor:pointer;transition:background .08s;}
 .adv-row:nth-child(even) .adv-main{background:var(--row2);}
 .adv-row:nth-child(odd) .adv-main{background:var(--row1);}
 .adv-row:hover .adv-main{background:var(--bg3);}
-.status-dot{width:10px;height:10px;border-radius:50%;margin:auto;}
+.status-dot{width:14px;height:14px;border-radius:50%;margin:auto;}
 .status-dot.done{background:var(--done);box-shadow:0 0 6px rgba(0,201,167,.5);}
 .status-dot.notdone{background:transparent;border:1.5px solid var(--notdone);}
-.adv-title{font-weight:600;font-size:15px;padding-right:10px;overflow:hidden;}
+.adv-title{font-weight:700;font-size:19px;padding-right:10px;overflow:hidden;}
 .adv-title-name{color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;}
-.adv-id{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text3);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.crit-count{font-family:'Share Tech Mono',monospace;font-size:12px;}
+.adv-id{font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text3);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.crit-count{font-family:'Share Tech Mono',monospace;font-size:15px;}
 .cc-done{color:var(--done);}
 .cc-total{color:var(--text3);}
-.adv-ts{font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text3);}
+.adv-ts{font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--text3);}
 .adv-ts.done{color:var(--done);opacity:.75;}
-.expand-btn{width:22px;height:22px;display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:11px;transition:transform .15s,color .1s;}
+.expand-btn{width:26px;height:26px;display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:14px;transition:transform .15s,color .1s;}
 .expand-btn.open{transform:rotate(90deg);color:var(--accent);}
-.criteria-panel{display:none;background:rgba(0,0,0,.25);border-top:1px solid var(--border);padding:8px 12px 10px 42px;}
+.criteria-panel{display:none;background:rgba(0,0,0,.25);border-top:1px solid var(--border);padding:10px 14px 12px 48px;}
 .criteria-panel.open{display:block;}
-.crit-row{display:grid;grid-template-columns:14px 1fr 160px;padding:4px 0;gap:8px;align-items:center;border-bottom:1px solid rgba(255,255,255,.03);}
+.crit-row{display:grid;grid-template-columns:18px 1fr 190px;padding:6px 0;gap:8px;align-items:center;border-bottom:1px solid rgba(255,255,255,.03);}
 .crit-row:last-child{border-bottom:none;}
-.crit-dot{width:6px;height:6px;border-radius:50%;}
+.crit-dot{width:9px;height:9px;border-radius:50%;}
 .crit-dot.done{background:var(--done);}
 .crit-dot.notdone{background:transparent;border:1px solid var(--notdone);}
-.crit-name{font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.crit-time{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text3);text-align:right;}
+.crit-name{font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--text2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.crit-time{font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text3);text-align:right;}
 .crit-time.done{color:var(--done);opacity:.65;}
 .meta-card{margin-top:10px;padding:10px 12px;background:rgba(255,107,53,.05);border:1px solid rgba(255,107,53,.15);border-radius:4px;display:flex;flex-direction:column;gap:6px;}
-.meta-desc{font-size:14px;color:var(--text2);line-height:1.5;}
-.meta-guide{font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text);white-space:pre-wrap;line-height:1.7;background:rgba(0,0,0,.2);padding:8px;border-radius:3px;}
-.meta-link{display:inline-flex;align-items:center;gap:5px;font-size:13px;color:var(--accent2);text-decoration:none;}
+.meta-desc{font-size:17px;color:var(--text2);line-height:1.5;}
+.meta-guide{font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--text);white-space:pre-wrap;line-height:1.7;background:rgba(0,0,0,.2);padding:8px;border-radius:3px;}
+.meta-link{display:inline-flex;align-items:center;gap:6px;font-size:16px;color:var(--accent2);text-decoration:none;}
 .meta-link:hover{text-decoration:underline;}
-.edit-adv-btn{display:inline-flex;align-items:center;gap:4px;margin-top:8px;padding:4px 10px;background:rgba(255,107,53,.08);border:1px solid rgba(255,107,53,.25);color:var(--accent3);font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:600;cursor:pointer;border-radius:3px;text-transform:uppercase;transition:all .12s;}
+.edit-adv-btn{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:6px 12px;background:rgba(255,107,53,.08);border:1px solid rgba(255,107,53,.25);color:var(--accent3);font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:600;cursor:pointer;border-radius:3px;text-transform:uppercase;transition:all .12s;}
 .edit-adv-btn:hover{background:rgba(255,107,53,.2);border-color:var(--accent3);}
 .empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:12px;color:var(--text3);}
 .em-icon{font-size:40px;opacity:.3;}
-.em-title{font-size:17px;font-weight:600;text-transform:uppercase;letter-spacing:1px;}
-.em-sub{font-size:13px;}
+.em-title{font-size:22px;font-weight:600;text-transform:uppercase;letter-spacing:1px;}
+.em-sub{font-size:16px;}
 
 /* ── MODALS ── */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:100;display:none;align-items:center;justify-content:center;}
@@ -173,7 +173,7 @@ tbody tr:nth-child(even) td{background:rgba(255,255,255,.02);}
 .sp-todo{background:rgba(255,68,85,.08);color:var(--notdone);border:1px solid rgba(255,68,85,.2);}
 
 /* notice banner */
-.notice{padding:9px 16px;background:rgba(0,144,255,.08);border-bottom:1px solid rgba(0,144,255,.2);font-size:13px;color:var(--accent2);display:flex;align-items:center;gap:8px;flex-shrink:0;}
+.notice{padding:11px 18px;background:rgba(0,144,255,.08);border-bottom:1px solid rgba(0,144,255,.2);font-size:16px;color:var(--accent2);display:flex;align-items:center;gap:8px;flex-shrink:0;}
 .notice a{color:var(--accent2);}
 .notice-close{margin-left:auto;cursor:pointer;color:var(--text3);font-size:16px;}
 
@@ -269,6 +269,11 @@ tbody tr:nth-child(even) td{background:rgba(255,255,255,.02);}
         <textarea class="field-textarea" id="editDesc" placeholder="e.g. Upgrade your pickaxe to iron or better"></textarea>
       </div>
       <div class="field-group">
+        <div class="field-label">Requirement / Trigger</div>
+        <div class="field-note">What the player must do in-game to earn this advancement.</div>
+        <textarea class="field-textarea" id="editReq" placeholder="e.g. Craft a Stone Pickaxe."></textarea>
+      </div>
+      <div class="field-group">
         <div class="field-label">Guide / Instructions</div>
         <div class="field-note">Step-by-step how-to, required items, tips, progression notes. Shown expanded in the tracker.</div>
         <textarea class="field-textarea" style="min-height:120px;" id="editGuide" placeholder="1. Gather 3 iron ingots&#10;2. Open a crafting table&#10;3. Place ingots in a pickaxe pattern"></textarea>
@@ -323,7 +328,7 @@ tbody tr:nth-child(even) td{background:rgba(255,255,255,.02);}
         <button class="btn-blue" onclick="toggleImport()">⬆ Import</button>
       </div>
       <div id="importBox" style="display:none;flex-direction:column;gap:8px;">
-        <textarea class="field-textarea" id="importArea" style="min-height:80px;font-family:'Share Tech Mono',monospace;font-size:11px;" placeholder='Paste meta.minecraft.json or meta.spectrum.json content here and click Import…'></textarea>
+        <textarea class="field-textarea" id="importArea" style="min-height:80px;font-family:'Share Tech Mono',monospace;font-size:11px;" placeholder='Paste meta.minecraft.json or meta.spectrum.json content here and click Import… Supports name, desc, req, guide, and link.'></textarea>
         <div style="display:flex;gap:8px;">
           <button class="btn-green" onclick="importMeta()">Apply Import</button>
           <button class="btn-secondary" onclick="toggleImport()">Cancel</button>
@@ -338,7 +343,8 @@ tbody tr:nth-child(even) td{background:rgba(255,255,255,.02);}
               <th style="width:32%">Advancement ID</th>
               <th style="width:8%">Status</th>
               <th style="width:26%">Display Name</th>
-              <th style="width:34%">Description</th>
+              <th style="width:24%">Description</th>
+              <th style="width:26%">Requirement / Trigger</th>
             </tr>
           </thead>
           <tbody id="bulkTbody"></tbody>
@@ -356,9 +362,10 @@ tbody tr:nth-child(even) td{background:rgba(255,255,255,.02);}
 <div class="toast" id="toast">✓ Saved</div>
 
 <script>
+  console.log("SCRIPT STARTED");
 // ══════════════════════════════════════════════════════════════════
 //  META — loaded from meta.json, then merged with localStorage overrides
-//  Structure of each entry: { name, desc, guide, link }
+//  Structure of each entry: { name, desc, req, guide, link }
 // ══════════════════════════════════════════════════════════════════
 let REMOTE_META = {};   // loaded from meta.json on the server
 let LOCAL_META  = {};   // user's local overrides (localStorage)
@@ -410,20 +417,33 @@ async function loadRemoteMeta() {
       const data = await res.json();
       Object.assign(REMOTE_META, data);
       loaded++;
-    } catch(e) {
-      failed++;
-      console.warn(`Could not load ${file}:`, e.message);
-    }
+} catch(e) {
+  failed++;
+  console.warn(`Could not load ${file}:`, e);
+  statusEl.textContent = `failed: ${file}`;
+  statusEl.className = 'meta-status err';
+}
   }
   const count = Object.keys(REMOTE_META).length;
   if (count > 0) {
     statusEl.textContent = `meta: ${count} entries`;
     statusEl.className = 'meta-status ok';
+    if (!Object.keys(DATA).length) {
+      DATA = buildBaseDataFromMeta();
+      renderAll();
+      
+    } else {
+      renderAll();
+      if (selNs) {
+        renderFolderList();
+        renderList();
+      }
+    }
   } else {
     statusEl.textContent = 'meta: local only';
     statusEl.className = 'meta-status err';
+    if (Object.keys(DATA).length) renderAll();
   }
-  if (Object.keys(DATA).length) renderList();
 }
 
 // ── FORMATTING ────────────────────────────────────────────────────
@@ -447,10 +467,34 @@ let DATA = {};
 let selNs = null, selFolder = null, filterMode = 'all';
 let expanded = new Set();
 
+function buildBaseDataFromMeta() {
+  const base = {};
+  for (const id of Object.keys(REMOTE_META)) {
+    base[id] = { done:false, criteria:{} };
+  }
+  return base;
+}
+
+function normalizeAdvancementEntry(entry) {
+  if (!entry || typeof entry !== 'object') return { done:false, criteria:{} };
+  const criteria = (entry.criteria && typeof entry.criteria === 'object') ? entry.criteria : {};
+  const done = entry.done !== undefined ? !!entry.done : Object.values(criteria).some(Boolean);
+  return { ...entry, done, criteria };
+}
+
+function mergeProgressIntoData(progress) {
+  const merged = buildBaseDataFromMeta();
+  for (const [id, raw] of Object.entries(progress || {})) {
+    if (id === 'DataVersion') continue;
+    merged[id] = normalizeAdvancementEntry(raw);
+  }
+  return merged;
+}
+
 function loadData(json) {
   try {
-    DATA = typeof json === 'string' ? JSON.parse(json) : json;
-    delete DATA['DataVersion'];
+    const parsed = typeof json === 'string' ? JSON.parse(json) : json;
+    DATA = mergeProgressIntoData(parsed);
     selNs = null; selFolder = null; expanded.clear();
     renderAll();
   } catch(e) { alert('Invalid JSON: ' + e.message); }
@@ -460,18 +504,12 @@ function loadData(json) {
 function renderAll() {
   renderStats();
   renderNsList();
-  document.getElementById('folderList').innerHTML = '';
-  document.getElementById('breadcrumb').innerHTML = '<span class="bc-ns">Select a namespace</span>';
-  document.getElementById('listContainer').innerHTML = `
-    <div class="empty-state">
-      <div class="em-icon">◈</div>
-      <div class="em-title">Select a namespace</div>
-      <div class="em-sub">Choose a namespace from the left panel to begin browsing</div>
-    </div>`;
+  renderFolderList();   // keep the left panel populated
+  renderList();         // immediately show everything
 }
 
 function renderStats() {
-  const all = Object.entries(DATA);
+  const all = Object.entries(DATA).filter(([k]) => k !== 'DataVersion');
   const done = all.filter(([,v]) => v.done).length;
   const pct = all.length ? Math.round(done/all.length*100) : 0;
   document.getElementById('progBar').style.width = pct + '%';
@@ -550,24 +588,38 @@ function selectFolder(folder) {
 }
 
 function getFiltered() {
-  if (!selNs) return [];
   const q = document.getElementById('searchBox').value.toLowerCase();
-  let entries = Object.entries(DATA).filter(([k]) => k.startsWith(selNs+':'));
-  if (selFolder!==null) {
+  let entries = Object.entries(DATA).filter(([k]) => k !== 'DataVersion');
+
+  // Only filter by namespace if one is actively selected
+  if (selNs) {
+    entries = entries.filter(([k]) => k.startsWith(selNs + ':'));
+  }
+
+  // Only filter by folder if BOTH namespace and folder are selected
+  if (selNs && selFolder !== null) {
     entries = entries.filter(([k]) => {
-      const path=k.split(':')[1]||'';
-      const parts=path.split('/');
-      return parts.length>1 ? parts[0]===selFolder : selFolder==='__root__';
+      const path = k.split(':')[1] || '';
+      const parts = path.split('/');
+      return parts.length > 1 ? parts[0] === selFolder : selFolder === '__root__';
     });
   }
-  if (filterMode==='done') entries=entries.filter(([,v])=>v.done);
-  if (filterMode==='todo') entries=entries.filter(([,v])=>!v.done);
-  if (q) entries=entries.filter(([k])=>getTitle(k).toLowerCase().includes(q)||k.toLowerCase().includes(q));
+
+  if (filterMode === 'done') entries = entries.filter(([,v]) => v.done);
+  if (filterMode === 'todo') entries = entries.filter(([,v]) => !v.done);
+
+  if (q) {
+    entries = entries.filter(([k]) =>
+      getTitle(k).toLowerCase().includes(q) || k.toLowerCase().includes(q)
+    );
+  }
+
   const sort = document.getElementById('sortSel').value;
-  if (sort==='title') entries.sort((a,b)=>getTitle(a[0]).localeCompare(getTitle(b[0])));
-  else if (sort==='recent') entries.sort((a,b)=>(latestTs(b[1].criteria)||'').localeCompare(latestTs(a[1].criteria)||''));
-  else if (sort==='oldest') entries.sort((a,b)=>(latestTs(a[1].criteria)||'').localeCompare(latestTs(b[1].criteria)||''));
-  else entries.sort((a,b)=>a[0].localeCompare(b[0]));
+  if (sort === 'title') entries.sort((a,b) => getTitle(a[0]).localeCompare(getTitle(b[0])));
+  else if (sort === 'recent') entries.sort((a,b) => (latestTs(b[1].criteria)||'').localeCompare(latestTs(a[1].criteria)||''));
+  else if (sort === 'oldest') entries.sort((a,b) => (latestTs(a[1].criteria)||'').localeCompare(latestTs(b[1].criteria)||''));
+  else entries.sort((a,b) => a[0].localeCompare(b[0]));
+
   return entries;
 }
 
@@ -575,57 +627,94 @@ function renderList() {
   const container = document.getElementById('listContainer');
   const entries = getFiltered();
   const bc = document.getElementById('breadcrumb');
-  if (!selNs) { bc.innerHTML='<span class="bc-ns">Select a namespace</span>'; return; }
-  let bcHtml = `<span class="bc-ns">${selNs}</span>`;
-  if (selFolder) bcHtml += `<span class="sep"> › </span><span>${selFolder}</span>`;
-  bcHtml += `<span class="sep"> — </span><span style="color:var(--text3)">${entries.length} advancements</span>`;
-  bc.innerHTML = bcHtml;
+
+  if (selNs) {
+    let bcHtml = `<span class="bc-ns">${selNs}</span>`;
+    if (selFolder) bcHtml += `<span class="sep"> › </span><span>${selFolder}</span>`;
+    bcHtml += `<span class="sep"> — </span><span style="color:var(--text3)">${entries.length} advancements</span>`;
+    bc.innerHTML = bcHtml;
+  } else {
+    bc.innerHTML = `<span class="bc-ns">All Namespaces</span><span class="sep"> — </span><span style="color:var(--text3)">${entries.length} advancements</span>`;
+  }
+
   if (!entries.length) {
-    container.innerHTML=`<div class="empty-state"><div class="em-icon">⊘</div><div class="em-title">No results</div><div class="em-sub">Try adjusting filters or search</div></div>`;
+    container.innerHTML = `
+      <div class="empty-state">
+        <div class="em-icon">⊘</div>
+        <div class="em-title">No results</div>
+        <div class="em-sub">Try adjusting filters or search</div>
+      </div>`;
     return;
   }
-  container.innerHTML = entries.map(([id,v]) => {
-    const title = getTitle(id);
-    const done = v.done;
-    const lts = latestTs(v.criteria);
-    const total = Object.keys(v.criteria||{}).length;
-    const doneC = doneCrit(v.criteria);
-    const isOpen = expanded.has(id);
-    const meta = getMeta(id);
 
-    const critHtml = Object.entries(v.criteria||{}).map(([name,ts]) => {
-      const cd = !!ts;
-      return `<div class="crit-row">
-        <div class="crit-dot ${cd?'done':'notdone'}"></div>
-        <div class="crit-name">${name.replace(/_/g,' ').replace(/\.json$/,'')}</div>
-        <div class="crit-time ${cd?'done':''}">${ts?fmtTs(ts):'—'}</div>
-      </div>`;
-    }).join('');
+  const grouped = {};
+  for (const [id, v] of entries) {
+    const ns = id.split(':')[0];
+    if (!grouped[ns]) grouped[ns] = [];
+    grouped[ns].push([id, v]);
+  }
 
-    const metaCard = (meta.desc||meta.guide||meta.link) ? `
-      <div class="meta-card">
-        ${meta.desc ? `<div class="meta-desc">${esc(meta.desc)}</div>` : ''}
-        ${meta.guide ? `<div class="meta-guide">${esc(meta.guide)}</div>` : ''}
-        ${meta.link ? `<a class="meta-link" href="${esc(meta.link)}" target="_blank" rel="noopener">▶ Open Guide</a>` : ''}
+  const namespacesToRender = selNs ? [selNs] : Object.keys(grouped).sort();
+
+  container.innerHTML = namespacesToRender.map(ns => {
+    const nsEntries = grouped[ns] || [];
+
+    const nsHeader = !selNs ? `
+      <div style="padding:10px 14px;background:var(--bg4);border-top:1px solid var(--border);border-bottom:1px solid var(--border);font-family:'Share Tech Mono',monospace;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--accent);">
+        ${ns}
       </div>` : '';
 
-    return `<div class="adv-row" data-id="${CSS.escape(id)}">
-      <div class="adv-main" onclick="toggleExpand(${JSON.stringify(id)})">
-        <div><div class="status-dot ${done?'done':'notdone'}"></div></div>
-        <div class="adv-title">
-          <span class="adv-title-name">${esc(title)}</span>
-          <span class="adv-id">${id}</span>
-        </div>
-        <div class="crit-count"><span class="cc-done">${doneC}</span><span class="cc-total">/${total}</span></div>
-        <div class="adv-ts ${done?'done':''}">${lts?fmtTs(lts):'—'}</div>
-        <div class="expand-btn ${isOpen?'open':''}">▶</div>
-      </div>
-      <div class="criteria-panel ${isOpen?'open':''}">
-        ${critHtml}
-        ${metaCard}
-        <button class="edit-adv-btn" onclick="openEditModal(${JSON.stringify(id)},event)">✏️ Edit Name &amp; Guide</button>
-      </div>
-    </div>`;
+    const rows = nsEntries.map(([id, v]) => {
+      const title = getTitle(id);
+      const vEntry = v || { done:false, criteria:{} };
+      const done = vEntry.done;
+      const criteria = vEntry.criteria || {};
+      const lts = latestTs(criteria);
+      const total = Object.keys(criteria).length;
+      const doneC = doneCrit(criteria);
+      const isOpen = expanded.has(id);
+      const meta = getMeta(id);
+
+      const critEntries = Object.entries(criteria);
+      const critHtml = critEntries.length ? critEntries.map(([name, ts]) => {
+        const cd = !!ts;
+        return `<div class="crit-row">
+          <div class="crit-dot ${cd ? 'done' : 'notdone'}"></div>
+          <div class="crit-name">${name.replace(/_/g,' ').replace(/\.json$/,'')}</div>
+          <div class="crit-time ${cd ? 'done' : ''}">${ts ? fmtTs(ts) : '—'}</div>
+        </div>`;
+      }).join('') : '';
+
+      const hasMeta = (meta.desc || meta.req || meta.guide || meta.link);
+      const metaCard = hasMeta ? `
+        <div class="meta-card">
+          ${meta.desc ? `<div><div class="field-label">Description</div><div class="meta-desc">${esc(meta.desc)}</div></div>` : ''}
+          ${meta.req ? `<div><div class="field-label">Requirement / Trigger</div><div class="meta-desc">${esc(meta.req)}</div></div>` : ''}
+          ${meta.guide ? `<div><div class="field-label">Guide / Instructions</div><div class="meta-guide">${esc(meta.guide)}</div></div>` : ''}
+          ${meta.link ? `<a class="meta-link" href="${esc(meta.link)}" target="_blank" rel="noopener">▶ Open Guide</a>` : ''}
+        </div>` : '';
+
+      return `
+        <div class="adv-row" data-id="${esc(id)}">
+          <div class="adv-main" onclick='toggleExpand(${JSON.stringify(id)})'>
+            <div><div class="status-dot ${done ? 'done' : 'notdone'}"></div></div>
+            <div class="adv-title">
+              <span class="adv-title-name">${esc(title)}</span>
+              <span class="adv-id">${id}</span>
+            </div>
+            <div class="crit-count"><span class="cc-done">${doneC}</span><span class="cc-total">/${total}</span></div>
+            <div class="adv-ts ${done ? 'done' : ''}">${lts ? fmtTs(lts) : '—'}</div>
+            <div class="expand-btn ${isOpen ? 'open' : ''}">▶</div>
+          </div>
+          <div class="criteria-panel ${isOpen ? 'open' : ''}">
+            ${critHtml}
+            ${metaCard}
+            ${(!critHtml && !hasMeta) ? '<div class="meta-desc">No details available.</div>' : ''}
+          </div>
+        </div>`;
+    }).join('');
+
+    return nsHeader + rows;
   }).join('');
 }
 
@@ -634,17 +723,13 @@ function esc(s) {
 }
 
 function toggleExpand(id) {
-  if (expanded.has(id)) expanded.delete(id); else expanded.add(id);
-  const row = document.querySelector(`[data-id="${CSS.escape(id)}"]`);
-  if (!row) return;
-  row.querySelector('.expand-btn').classList.toggle('open', expanded.has(id));
-  row.querySelector('.criteria-panel').classList.toggle('open', expanded.has(id));
-}
-
-function setFilter(mode, btn) {
-  filterMode = mode;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('fa','fn'));
-  btn.classList.add(mode==='todo'?'fn':'fa');
+  if (expanded.has(id)) {
+    expanded.delete(id);
+  } else {
+    expanded.add(id);
+  }
+  
+  // Re-render just the list to show the change
   renderList();
 }
 
@@ -657,6 +742,7 @@ function openEditModal(id, e) {
   document.getElementById('editModalId').textContent = id;
   document.getElementById('editName').value = m.name || '';
   document.getElementById('editDesc').value = m.desc || '';
+  document.getElementById('editReq').value = m.req || '';
   document.getElementById('editGuide').value = m.guide || '';
   document.getElementById('editLink').value = m.link || '';
   document.getElementById('editModal').classList.add('open');
@@ -670,6 +756,7 @@ function saveEditModal() {
   if (!LOCAL_META[_editId]) LOCAL_META[_editId] = {};
   LOCAL_META[_editId].name  = document.getElementById('editName').value.trim();
   LOCAL_META[_editId].desc  = document.getElementById('editDesc').value.trim();
+  LOCAL_META[_editId].req   = document.getElementById('editReq').value.trim();
   LOCAL_META[_editId].guide = document.getElementById('editGuide').value.trim();
   LOCAL_META[_editId].link  = document.getElementById('editLink').value.trim();
   saveLocal();
@@ -756,6 +843,7 @@ function renderBulkTable() {
       <td>${pillHtml}</td>
       <td><input class="td-input" data-id="${esc(id)}" data-field="name" value="${esc(m.name||'')}" placeholder="${esc(remoteName||autoFallback)}"></td>
       <td><input class="td-input" data-id="${esc(id)}" data-field="desc" value="${esc(m.desc||'')}" placeholder="Description…"></td>
+      <td><input class="td-input" data-id="${esc(id)}" data-field="req" value="${esc(m.req||'')}" placeholder="Requirement / trigger…"></td>
     </tr>`;
   }).join('');
 }
@@ -783,7 +871,7 @@ function exportMeta(ns) {
   for (const id of allIds.sort()) {
     if (ns && !id.startsWith(ns + ':')) continue;
     const m = getMeta(id);
-    out[id] = { name: m.name||'', desc: m.desc||'', guide: m.guide||'', link: m.link||'' };
+    out[id] = { name: m.name||'', desc: m.desc||'', req: m.req||'', guide: m.guide||'', link: m.link||'' };
   }
   const filename = ns ? `meta.${ns}.json` : 'meta.json';
   const blob = new Blob([JSON.stringify(out,null,2)],{type:'application/json'});
@@ -803,6 +891,7 @@ function importMeta() {
       if (!LOCAL_META[id]) LOCAL_META[id] = {};
       if (val.name  !== undefined) LOCAL_META[id].name  = val.name;
       if (val.desc  !== undefined) LOCAL_META[id].desc  = val.desc;
+      if (val.req   !== undefined) LOCAL_META[id].req   = val.req;
       if (val.guide !== undefined) LOCAL_META[id].guide = val.guide;
       if (val.link  !== undefined) LOCAL_META[id].link  = val.link;
       count++;
@@ -826,9 +915,22 @@ document.getElementById('fileInput').addEventListener('change', e => {
   r.onload = ev => loadData(ev.target.result);
   r.readAsText(f);
 });
+function setFilter(mode, btn) {
+  filterMode = mode;
 
+  document.querySelectorAll('.filter-btns .filter-btn').forEach(b => {
+    b.classList.remove('fa', 'fn');
+  });
+
+  if (mode === 'all') btn.classList.add('fa');
+  else if (mode === 'todo') btn.classList.add('fn');
+  else btn.classList.add('fa');
+
+  renderList();
+}
 // ── BOOT ──────────────────────────────────────────────────────────
 loadRemoteMeta();
+console.log("SCRIPT ENDED");
 </script>
 </body>
 </html>
